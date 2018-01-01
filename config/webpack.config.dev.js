@@ -190,7 +190,6 @@ module.exports = {
           },
 	  {
 	    test: /\.scss$/,
-	    include: paths.appSrc,
 	    loaders: ["style", "css", "sass"]
 	  }
           // "file" loader makes sure those assets get served by WebpackDevServer.
