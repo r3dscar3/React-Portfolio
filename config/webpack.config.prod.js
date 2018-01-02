@@ -46,6 +46,10 @@ const extractTextPluginOptions = shouldUseRelativeAssetPaths
     { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
+const extractSass = new ExtractTextPlugin({
+  filename: “[name].[contenthash].css”,
+  disable: process.env.NODE_ENV === “development”
+)} 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
@@ -214,13 +218,14 @@ module.exports = {
           },
 			{
             test: /\.scss$/,
-            use: [{
-                  loader: "style-loader"
+            use: extractSass.extract({
+			      use: [{
+                  loader: "css-loader"
                 }, {
-                  loader, "css-loader"
-                }, {
-                  loader: "sass-loader"
-                }]
+                  loader, "sass-loader"
+                }], 
+			      fallback: "style-loader"
+              })
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
@@ -297,6 +302,7 @@ module.exports = {
     new ExtractTextPlugin({
       filename: cssFilename,
     }),
+    extractSass,
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
