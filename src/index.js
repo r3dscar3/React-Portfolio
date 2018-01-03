@@ -1,7 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './layouts/App';
+import { render } from 'react-dom';
+import { BrowserRouter, Route }
+import * as layouts from './views/layouts';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+	<BrowserRouter basename={'/'}>
+		<Route path="/" component={layouts.App} />
+	</BrowserRouter>, document.getElementById('root')
+);
 registerServiceWorker();
