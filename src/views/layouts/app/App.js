@@ -15,7 +15,7 @@ class App extends Component {
       	</header>
       	<div className="main-section">
       		<main className="content">
-			      	<Route path={'/'} component={pages.Home} />
+			      	<Route exact path={'/'} component={pages.Home} />
       			<Route path={'/test'} component={pages.Test} />
       		</main>
       	</div>

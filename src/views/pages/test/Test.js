@@ -3,10 +3,9 @@ import React, {Component} from 'react';
 class Test extends Component {
 	render() {
 		return (
-			<div className="App">
-	    	<h1>Testies</h1>
-	      <p className="App-intro">
-	      	123
+			<div className="test-page">
+	      <p>
+	      	Testies 123
 	      </p>
 	    </div>
 		)	
