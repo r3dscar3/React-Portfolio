@@ -28,6 +28,11 @@ a {
   text-align: center;
 }
 
+header,
+footer {
+	width: 100%;
+}
+
 .main-section {
 	flex: 0 0 100%;
 	display: flex;
