@@ -1,6 +1,7 @@
 @import './includes/_sass-includes';
 
 body {
+	background-color: #ececec;
 	font-family: $base_font;
   margin: 0;
   padding: 0;
@@ -34,6 +35,7 @@ footer {
 }
 
 .main-section {
+	background-color: #fff;
 	flex: 0 0 100%;
 	display: flex;
 	flex-direction: column;
