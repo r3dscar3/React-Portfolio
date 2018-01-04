@@ -27,3 +27,10 @@ a {
 	align-items: center;
   text-align: center;
 }
+
+.content {
+	flex: 0 0 100%;
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+}
