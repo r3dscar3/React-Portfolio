@@ -13,11 +13,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 210px;
+	width: 310px;
   
   img {
   	max-width: 100%;
   	height: auto;
+  }
+  
+  h1 {
+  	text-align: center;
   }
 }
 
