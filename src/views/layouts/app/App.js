@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import * as pages from '../../pages/index';
 
-import '../../../styles/common/app.scss';
+import '../../styles/common/app.scss';
 
 class App extends Component {
   render() {
