@@ -1,10 +1,10 @@
+import '../../../styles/app.scss';
+
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import * as pages from '../../pages/index';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-
-import '../../../styles/app.scss';
 
 class App extends Component {
   render() {
