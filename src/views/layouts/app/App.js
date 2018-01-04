@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import * as pages from '../../pages/index';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 import '../../../styles/app.scss';
 
@@ -9,9 +11,7 @@ class App extends Component {
     return (
       <div id="wrapper">
       	<header>
-      		<div className="header">
-      			<h1>Nolan Panther</h1>
-      		</div>   
+      		<Header />   
       	</header>
       	<div className="main-section">
       		<main className="content">
@@ -19,6 +19,9 @@ class App extends Component {
       			<Route path={'/test'} component={pages.Test} />
       		</main>
       	</div>
+      	<footer>
+      		<Footer />
+      	</footer>
       </div>
     );
   }
