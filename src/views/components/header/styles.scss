@@ -9,8 +9,15 @@
 }
 
 .logo {
-	width: auto; 
-  height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 210px;
+  
+  img {
+  	max-width: 100%;
+  	height: auto;
+  }
 }
 
 .nav {

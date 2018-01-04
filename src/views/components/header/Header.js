@@ -7,7 +7,7 @@ import Logo from '../../../images/logo.svg';
 const Header = () => {
 	return (
 		<div className="header">
-			<Link to={'/'}><img className="logo" src={Logo} alt="Glasses" /></Link>
+			<Link className="logo" to={'/'}><img src={Logo} alt="Glasses" /></Link>
 			<ul className="nav">
 				<li>
 					<Link to={'/about'}>About Me</Link>
