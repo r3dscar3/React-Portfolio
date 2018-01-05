@@ -1,6 +1,8 @@
 @import '../../../styles/includes/_sass-includes';
 
 .footer {
+	display: flex;
+	flex-direction: column;
 	background-color: #000;
 	height: 100%;
 }
