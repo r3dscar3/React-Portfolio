@@ -26,6 +26,7 @@ class App extends Component {
 	      <footer>
 	      	<Footer />
 	      </footer>
+	      <div className="console-clear" />
     	</div>
     );
   }
