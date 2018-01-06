@@ -15,21 +15,10 @@ footer {
 	border: 1px solid green;
 }
 
-.debug-wrapper {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	align-content: stretch;
-	
-	.wrapper {
-		flex: 1;
-		overflow: auto;
-	}
-	
-	#console {
-		width: 100%;
-		min-height: 300px;
-		background-color: #fff;
-	}
+.console-log-div {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 95% !important;
+  background-color: #efefef;
 }
