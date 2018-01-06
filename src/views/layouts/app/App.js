@@ -17,7 +17,7 @@ class App extends Component {
 		let logger = document.getElementById('console');
 		
 		console.log = (message) => {
-			if (typeof message == 'object') {
+			if (typeof message === 'object') {
 		  	logger.innerHTML += (JSON && JSON.stringify
 		    	? JSON.stringify(message)
 		    	: String(message)) + '<br />';
