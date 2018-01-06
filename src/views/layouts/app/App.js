@@ -7,6 +7,13 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 
 class App extends Component {
+	
+	componentWillMount () {
+  	const script = document.createElement("script");
+		script.src = "";
+    script.async = true;
+		document.body.appendChild(script);
+  }
     
   render() {
   
