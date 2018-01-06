@@ -22,5 +22,9 @@ legend {
 .console-clear {
 	width: 100%;
 	height: 300px;
-	border: 1px solid #ececec;
+	min-height: 300px
+	
+	div {
+		min-height: 300px;
+	}
 }
