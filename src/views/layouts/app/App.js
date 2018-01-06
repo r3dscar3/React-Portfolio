@@ -9,41 +9,22 @@ import Footer from '../../components/footer';
 class App extends Component {
     
   render() {
-  	if (!console) {
-			console = {};
-		}
-		
-		let old = console.log;
-		let logger = document.getElementById('console');
-		
-		console.log = (message) => {
-			if (typeof message === 'object') {
-		  	logger.innerHTML += (JSON && JSON.stringify
-		    	? JSON.stringify(message)
-		    	: String(message)) + '<br />';
-		  } else {
-		  	logger.innerHTML += message + '<br />';
-		  }
-		}
-	
+  
     return (
-    	<div className="debug-wrapper">
-	      <div id="wrapper">
-	      	<header>
-	      		<Header />   
-	      	</header>
-	      	<div className="main-section">
-	      		<main className="content">
-				      	<Route exact path={'/'} component={pages.Home} />
-	      			<Route path={'/test'} component={pages.Test} />
-	      		</main>
-	      	</div>
-	      	<footer>
-	      		<Footer />
-	      	</footer>
+	  	<div id="wrapper">
+	    	<header>
+	      	<Header />   
+	      </header>
+	      <div className="main-section">
+	      	<main className="content">
+				  		<Route exact path={'/'} component={pages.Home} />
+	      		<Route path={'/test'} component={pages.Test} />
+	      	</main>
 	      </div>
-	      <div id="console" />
-      </div>
+	      <footer>
+	      	<Footer />
+	      </footer>
+    	</div>
     );
   }
 }
