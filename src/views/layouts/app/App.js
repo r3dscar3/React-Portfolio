@@ -13,7 +13,6 @@ class App extends Component {
 			console = {};
 		}
 		
-		let old = console.log;
 		let logger = document.getElementById('console');
 		
 		console.log = (message) => {
@@ -25,6 +24,8 @@ class App extends Component {
 		  	logger.innerHTML += message + '<br />';
 		  }
 		}
+		
+		console.log("Test");
 	
     return (
     	<div className="debug-wrapper">
