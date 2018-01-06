@@ -1,6 +1,4 @@
 (function initConsoleLogDiv() {
-  'use strict';
-
 
   if (console.log.toDiv) {
     return;
