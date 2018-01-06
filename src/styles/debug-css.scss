@@ -1,0 +1,32 @@
+div {
+	border: 1px solid #000;
+	
+	> div {
+		border: 1px solid red;
+		
+		> div{
+			border: 1px solid blue; 
+		}
+	}
+}
+
+header,
+footer {
+	border: 1px solid green;
+}
+
+.debug-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	align-content: stretch;
+	
+	.wrapper {
+		flex: 1;
+		overflow: auto;
+	}
+	
+	#console {
+		min-height: 300px;
+	}
+}

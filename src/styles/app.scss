@@ -1,4 +1,5 @@
 @import './includes/_sass-includes';
+@import './debug-css.scss';
 
 html,
 body {
@@ -39,7 +40,6 @@ a {
 }
 
 #wrapper {
-	background-color: #555;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
