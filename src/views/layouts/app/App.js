@@ -25,8 +25,6 @@ class App extends Component {
 		  	logger.innerHTML += message + '<br />';
 		  }
 		}
-		
-		console.log('Test');
 	
     return (
     	<div className="debug-wrapper">
