@@ -36,7 +36,7 @@ class Home extends Component {
 		return (
 			<div className="home-page">
 	      {
-	      	Object.keys(projects).map(project => 
+	      	projects.map(project => 
 	      		<div key={project.title} className="project">
 	      			<img src={project.img} />
 	      			<h2 className="project-title">
