@@ -11,12 +11,16 @@ const projects = [
 			title: "MainSet",
 			description: "HubSpot CMS, jquery, bootstrap",
 			img: MainSet
-		},
+		}
+	],
+	[
 		{
 			title: "TouchPad Live",
 			description: "Angular, jquery, bootstrap",
 			img: TouchPad
-		},
+		}
+	],
+	[
 		{
 			title: "TightLine Adventures",
 			description: "WordPress, jquery, bootstrap",
