@@ -23,8 +23,6 @@ const projects = [
 		}
 ];
 
-console.log(projects);
-
 class Home extends Component {
 	render() {
 		return (
