@@ -19,9 +19,7 @@ body {
 #root {
 	position: relative;
 	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
+	padding: 0 40px;
 }
 
 h1,
@@ -43,28 +41,32 @@ a {
 }
 
 #wrapper {
-	width: 100%;
-	height: 100%;
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid: 2fr 1fr / 250px 1fr;
+	grid-column-gap: 40px;
 }
 
-header,
-footer {
-	width: 100%;
+header {
+	grid-area: 1 / 1 / 3 / 1;
 }
 
 .main-section {
-	background-color: #fff;
+	grid-area: 1 / 2 / 3 / 3;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+}
+
+.content {
+	background-color: #fff;
 	width: 100%;
-	max-width: 90%;
+	max-width: 800px;
 	margin: 20px auto;
 	min-height: 500px;
 }
 
 footer {
-	min-height: 200px;
-	background-color: #333;
-	margin-top: 40px;
+	grid-area: 2 / 1 / 3 / 2;
 }
