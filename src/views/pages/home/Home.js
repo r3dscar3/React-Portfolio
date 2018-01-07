@@ -6,27 +6,21 @@ import TouchPad from '../../../images/logo.svg';
 import TightLine from '../../../images/logo.svg';
 
 const projects = [
-	[
 		{
 			title: "MainSet",
 			description: "HubSpot CMS, jquery, bootstrap",
 			img: MainSet
-		}
-	],
-	[
+		},
 		{
 			title: "TouchPad Live",
 			description: "Angular, jquery, bootstrap",
 			img: TouchPad
-		}
-	],
-	[
+		},
 		{
 			title: "TightLine Adventures",
 			description: "WordPress, jquery, bootstrap",
 			img: TightLine
 		}
-	]
 ];
 
 console.log(projects);
@@ -36,8 +30,8 @@ class Home extends Component {
 		return (
 			<div className="home-page">
 	      {
-	      	projects.map(project => 
-	      		<div key={project.title} className="project">
+	      	projects.map((project, index) => 
+	      		<div key={index} className="project">
 	      			<img src={project.img} />
 	      			<h2 className="project-title">
 	      				{project.title}
