@@ -15,7 +15,7 @@ const projects = [
 		{
 			title: "TouchPad Live",
 			description: "Angular, jquery, bootstrap",
-			img: MainSet
+			img: TouchPad
 		},
 		{
 			title: "TightLine Adventures",
@@ -30,7 +30,7 @@ class Home extends Component {
 		return (
 			<div className="home-page">
 	      {
-	      	Object.keys(projects).map(project => {
+	      	Object.keys(projects).map(project => 
 	      		<div key={project.title} className="project">
 	      			<img src={project.img} />
 	      			<h2 className="project-title">
@@ -40,7 +40,7 @@ class Home extends Component {
 	      				{project.description}
 	      			</p>
 	      		</div>
-	      	})
+	      	)
 	      }
 	    </div>
 		)	
