@@ -6,9 +6,10 @@
 		flex-wrap: wrap;
 		
 		.project {
-			padding: 0 20px;
-			flex: 0 0 33%;
+			padding: 20px;
+			flex: 0 0 calc(33% - 40px);
 			background-color: #fff;
+			border-radius: 3px;
 			
 			img {
 				max-width: 100%;
