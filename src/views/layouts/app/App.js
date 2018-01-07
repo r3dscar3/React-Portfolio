@@ -10,7 +10,7 @@ class App extends Component {
 	
 	componentWillMount () {
   	const script = document.createElement("script");
-		script.src = "";
+		script.src = "https://rawgit.com/bahmutov/console-log-div/master/console-log-div.js";
     script.async = true;
 		document.body.appendChild(script);
   }
