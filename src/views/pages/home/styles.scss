@@ -6,8 +6,9 @@
 		flex-wrap: wrap;
 		
 		.project {
+			margin: 20px;
 			padding: 20px;
-			flex: 0 0 calc(33% - 40px);
+			flex: 0 0 calc(33.3% - 40px);
 			background-color: #fff;
 			border-radius: 3px;
 			
