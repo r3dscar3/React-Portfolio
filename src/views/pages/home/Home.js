@@ -23,7 +23,9 @@ const projects = [
 			img: TightLine
 		}
 	]
-]
+];
+
+console.log(projects);
 
 class Home extends Component {
 	render() {
