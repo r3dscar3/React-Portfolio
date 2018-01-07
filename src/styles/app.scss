@@ -43,36 +43,23 @@ a {
 }
 
 #wrapper {
+	display: grid;
 	width: 100%;
 	height: 100%;
-	grid: [row1-start] "top top" 2fr [row1-end] [row2-start] "footer footer" 1fr [row2-end]
-        / [col1-start] "sidebar" 1fr [col1-end] [col2-start] "main" 2fr [col2-end];
-}
-
-header,
-footer {
-	width: 100%;
+	grid: 2fr 1fr / 250px 1fr;
 }
 
 header {
-	grid-area: sidebar;
+	grid-area: 1 / 1 / 3 / 1;
 }
 
 .main-section {
-	grid-area: main;
-	background-color: #fff;
+	grid-area: 1 / 2 / 3 / 3;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	max-width: 90%;
-	margin: 20px auto;
-	min-height: 500px;
 }
 
 footer {
-	grid-area: footer;
-	min-height: 200px;
-	background-color: #333;
-	margin-top: 40px;
+	grid-area: 2 / 1 / 3 / 2;
 }
