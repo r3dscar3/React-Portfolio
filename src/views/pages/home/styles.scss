@@ -4,11 +4,10 @@
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		padding: 20px;
 		
 		.project {
 			padding: 0 20px;
-			flex: 0 0 calc(33% - 40px);
+			flex: 0 0 33%;
 			background-color: #fff;
 			
 			img {
