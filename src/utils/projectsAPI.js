@@ -37,3 +37,5 @@ const projects = [
 			img: tuUniversity
 		}
 ];
+
+export default projects;

@@ -1,9 +1,7 @@
 import './styles.scss';
 
 import React, {Component} from 'react';
-import projectsAPI from '../../../utils/projectsAPI';
-
-const projects = projectsAPI.projects;
+import projects from '../../../utils/projectsAPI';
 
 class Home extends Component {
 	render() {
