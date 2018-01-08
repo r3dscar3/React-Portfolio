@@ -1,27 +1,9 @@
 import './styles.scss';
 
 import React, {Component} from 'react';
-import MainSet from '../../../images/logo.svg';
-import TouchPad from '../../../images/logo.svg';
-import TightLine from '../../../images/logo.svg';
+import projectsAPI from '../../../utils/projectsAPI';
 
-const projects = [
-		{
-			title: "MainSet",
-			description: "HubSpot CMS, jquery, bootstrap",
-			img: MainSet
-		},
-		{
-			title: "TouchPad Live",
-			description: "Angular, jquery, bootstrap",
-			img: TouchPad
-		},
-		{
-			title: "TightLine Adventures",
-			description: "WordPress, jquery, bootstrap",
-			img: TightLine
-		}
-];
+const projects = projectsAPI.projects;
 
 class Home extends Component {
 	render() {
