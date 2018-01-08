@@ -5,7 +5,7 @@ import React from 'react';
 const Footer = () => {
 	return (
 		<div className="footer">
-			<p>Footer</p>
+			<p>&copy; Nolan Thompson</p>
 		</div>
 	)
 }
