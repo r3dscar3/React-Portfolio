@@ -10,7 +10,7 @@ class Home extends Component {
 	      {
 	      	projects.map((project, index) => 
 	      		<div key={index} className="project">
-	      			<img src={project.img} />
+	      			<img src={project.img} alt={projects.title} />
 	      			<h2 className="project-title">
 	      				{project.title}
 	      			</h2>
