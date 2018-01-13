@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Test extends Component {
+class About extends Component {
 	render() {
 		return (
 			<div className="about-page">
