@@ -17,7 +17,7 @@ class App extends Component {
 	      <div className="main-section">
 	      	<main className="content">
 				  		<Route exact path={'/'} component={pages.Home} />
-	      		<Route path={'/test'} component={pages.Test} />
+	      		<Route path={'/about'} component={pages.About} />
 	      	</main>
 	      </div>
 	      <footer>
