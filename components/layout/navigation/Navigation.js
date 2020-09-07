@@ -16,15 +16,17 @@ const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.backgroundMenu};
   flex: 0 0 auto;
-  padding-top: 37px;
+  padding-top: 28px;
   width: 50px;
 
   ${mediaQueries.tablet`
     width: 108px;
+    padding-top: 20px;
   `}
 
   ${mediaQueries.desktop`
     width: 200px;
+    padding-top: 15px;
   `}
 `;
 
@@ -84,13 +86,13 @@ const Navigation = (props) => {
         ))}
       </NavWrapper>
       <Footer>
-        <a target='_blank' rel="noopener noreferer nofollow" href='https://github.com/r3dscar3'>
+        <a target='_blank' rel='noopener noreferer nofollow' href='https://github.com/r3dscar3'>
           <GitHub />
         </a>
-        <a target='_blank' rel="noopener noreferer nofollow" href='https://codepen.io/r3dscar3'>
+        <a target='_blank' rel='noopener noreferer nofollow' href='https://codepen.io/r3dscar3'>
           <CodePen />
         </a>
-        <a target='_blank' rel="noopener noreferer nofollow" href='https://linkedin.com/r3dscar3'>
+        <a target='_blank' rel='noopener noreferer nofollow' href='https://linkedin.com/r3dscar3'>
           <LinkedIn />
         </a>
       </Footer>

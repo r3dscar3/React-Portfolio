@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default ({ fill = '#222' }) => {
+import theme from 'utils/theme';
+
+export default ({ fill = theme.colors.textDefault }) => {
   return (
     <svg fill={fill} viewBox='0 0 48 48'>
       <path

@@ -36,7 +36,7 @@ const Emoji = styled.div`
 const Text = styled.a`
   color: ${(props) => (props.active ? '#fff' : '#cacaca')};
   display: none;
-  font-family: ${(props) => props.theme.fontFamilies.proxima};
+  font-family: ${(props) => props.theme.fontStack};
   font-weight: 700;
   margin-left: 18px;
 

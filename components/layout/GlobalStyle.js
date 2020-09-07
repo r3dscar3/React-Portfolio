@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import theme from 'utils/theme';
+
 export default createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
      v2.0 | 20110126
@@ -64,7 +66,7 @@ export default createGlobalStyle`
 
   body {
     color: #4a4a4a;
-    font-family: proxima-nova, sans-serif;
+    font-family: ${theme.fontStack};
   }
 
   * {

@@ -2347,25 +2347,34 @@ var MyDocument = /*#__PURE__*/function (_Document) {
           lineNumber: 33,
           columnNumber: 9
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("body", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap",
+        rel: "stylesheet",
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34,
+          columnNumber: 11
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("body", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
           columnNumber: 9
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_11__["Main"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35,
+          lineNumber: 40,
           columnNumber: 11
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_11__["NextScript"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36,
+          lineNumber: 41,
           columnNumber: 11
         }
       })));

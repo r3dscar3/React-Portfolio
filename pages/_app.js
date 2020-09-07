@@ -1,7 +1,7 @@
+import React from 'react';
 import App, { Container } from 'next/app';
 import 'cross-fetch/polyfill';
 import Head from 'next/head';
-import React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
@@ -38,13 +38,11 @@ export default class MyApp extends App {
       <ApolloProvider client={client}>
         <Container>
           <ThemeProvider theme={theme}>
-            <React.Fragment>
               <GlobalStyle />
               <Wrapper>
-                <Navigation />
                 <Component {...pageProps} />
+                <Navigation />
               </Wrapper>
-            </React.Fragment>
           </ThemeProvider>
         </Container>
       </ApolloProvider>

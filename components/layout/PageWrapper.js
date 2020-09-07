@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import mediaQueries from 'utils/mediaQueries';
+import theme from 'utils/theme';
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   align-items: center;
-  border-bottom: 1px solid #c8ced4;
+  border-bottom: 1px solid ${theme.colors.border};
   display: flex;
   flex: 0 0 auto;
   height: 72px;
@@ -26,10 +27,9 @@ const Emoji = styled.div`
 `;
 
 const Heading = styled.h1`
-  color: #9fa6ad;
-  font-family: ${(props) => props.theme.fontFamilies.proxima};
+  color: ${theme.colors.textGrey};
+  font-family: ${(props) => props.theme.fontStack};
   font-size: 18px;
-  font-weight: 700;
   line-height: 1.5;
   margin-left: 13px;
 `;

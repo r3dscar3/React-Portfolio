@@ -67,11 +67,11 @@ export default () => {
         <Styled.Body>
           <Styled.H1>
             Nolan Thompson
-            <small>Software developer</small>
+            <small>Frontend developer & ex. graphic designer</small>
           </Styled.H1>
 
           <CodeWrapper>
-            {splitLineBreaks(data.Datum.sections[0].content).map((line, idx) => {
+            {splitLineBreaks(data.Page.sections[0].content).map((line, idx) => {
               return <span key={idx}>{line}</span>;
             })}
           </CodeWrapper>

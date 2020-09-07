@@ -11,7 +11,7 @@ const StyledSvg = styled.svg`
   }
 `;
 
-export default ({ fill = '#222' }) => {
+export default ({ fill = theme.colors.textDefault }) => {
   return (
     <StyledSvg fill={fill} viewBox='0 0 867.96 303.51'>
       <path d='M94.65,54c-17,12.54-27.86,32.41-30.14,63.36A151.69,151.69,0,0,0,204.64,279.75c35.54,2.62,68.73-7.77,96.07-26.38Z' />

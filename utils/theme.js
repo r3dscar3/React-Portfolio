@@ -1,16 +1,12 @@
 export default {
   colors: {
-    textDefault: '#4a4a4a',
-    backgroundContent: '#f3f3f3',
+    textDefault: '#0D1A33',
+    textGrey: '#A3B1CC',
+    backgroundContent: '#F0F3FA',
     backgroundMenu: '#2E4F7B',
-    border: '#E0E5E9',
-    darkGrey: '#5F6B78',
-    lightGrey: '#FBFCFC',
-    blue: '#4597E0',
-    strainBackground: '#EAEFF4',
-    strainBorder: '#8DA0B6',
+    border: '#CFD6E5',
+    darkGrey: '#738099',
+    lightGrey: '#E1E8F5',
   },
-  fontFamilies: {
-    proxima: 'proxima-nova, sans-serif',
-  },
+  fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif',
 };

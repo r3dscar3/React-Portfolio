@@ -17,17 +17,29 @@ export const Image = styled.img`
 
 export const H1 = styled.h1`
   font-size: 28px;
-
+  font-weight: 700;
+  line-height: 1.5em;
+  
   small {
     display: block;
     font-size: 0.6em;
-    line-height: 0.6em;
-    color: #666;
+    line-height: 1em;
+    color: ${theme.colors.textGrey};
   }
 `;
 
+export const H2 = styled.h2`
+  font-size: 22px;
+  font-weight: 700;
+`;
+
+export const H3 = styled.h3`
+  font-size: 20px;
+  font-weight: 700;
+`;
+
 export const Body = styled.div`
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 `;
 
 export const Paragraph = styled.div`

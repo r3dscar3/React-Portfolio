@@ -105,10 +105,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  /* http://meyerweb.com/eric/tools/css/reset/\n     v2.0 | 20110126\n     License: none (public domain)\n  */\n\n  html, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed,\n  figure, figcaption, footer, header, hgroup,\n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n  }\n  /* HTML5 display-role reset for older browsers */\n  article, aside, details, figcaption, figure,\n  footer, header, hgroup, menu, nav, section {\n    display: block;\n  }\n  body {\n    line-height: 1;\n  }\n  ol, ul {\n    list-style: none;\n  }\n  blockquote, q {\n    quotes: none;\n  }\n  blockquote:before, blockquote:after,\n  q:before, q:after {\n    content: '';\n    content: none;\n  }\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n\n  /* */\n  html {\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    text-rendering: optimizeLegibility;\n  }\n\n  body, html, #__next {\n    height: 100%;\n    width: 100%;\n  }\n\n  body {\n    color: #4a4a4a;\n    font-family: proxima-nova, sans-serif;\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n\n  b, strong {\n    font-weight: bold;\n  }\n\n  em, i {\n    font-style: italic;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  /* http://meyerweb.com/eric/tools/css/reset/\n     v2.0 | 20110126\n     License: none (public domain)\n  */\n\n  html, body, div, span, applet, object, iframe,\n  h1, h2, h3, h4, h5, h6, p, blockquote, pre,\n  a, abbr, acronym, address, big, cite, code,\n  del, dfn, em, img, ins, kbd, q, s, samp,\n  small, strike, strong, sub, sup, tt, var,\n  b, u, i, center,\n  dl, dt, dd, ol, ul, li,\n  fieldset, form, label, legend,\n  table, caption, tbody, tfoot, thead, tr, th, td,\n  article, aside, canvas, details, embed,\n  figure, figcaption, footer, header, hgroup,\n  menu, nav, output, ruby, section, summary,\n  time, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n  }\n  /* HTML5 display-role reset for older browsers */\n  article, aside, details, figcaption, figure,\n  footer, header, hgroup, menu, nav, section {\n    display: block;\n  }\n  body {\n    line-height: 1;\n  }\n  ol, ul {\n    list-style: none;\n  }\n  blockquote, q {\n    quotes: none;\n  }\n  blockquote:before, blockquote:after,\n  q:before, q:after {\n    content: '';\n    content: none;\n  }\n  table {\n    border-collapse: collapse;\n    border-spacing: 0;\n  }\n\n  /* */\n  html {\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    text-rendering: optimizeLegibility;\n  }\n\n  body, html, #__next {\n    height: 100%;\n    width: 100%;\n  }\n\n  body {\n    color: #4a4a4a;\n    font-family: ", ";\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n\n  b, strong {\n    font-weight: bold;\n  }\n\n  em, i {\n    font-style: italic;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -118,7 +119,8 @@ function _templateObject() {
 }
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject()));
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), utils_theme__WEBPACK_IMPORTED_MODULE_2__["default"].fontStack));
 
 /***/ }),
 
@@ -314,7 +316,7 @@ var Emoji = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templa
 var Text = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.a(_templateObject6(), function (props) {
   return props.active ? '#fff' : '#cacaca';
 }, function (props) {
-  return props.theme.fontFamilies.proxima;
+  return props.theme.fontStack;
 }, utils_mediaQueries__WEBPACK_IMPORTED_MODULE_4__["default"].desktop(_templateObject7()));
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var active = props.active,
@@ -412,7 +414,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 200px;\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 200px;\n    padding-top: 15px;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -422,7 +424,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 108px;\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 108px;\n    padding-top: 20px;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -432,7 +434,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  flex: 0 0 auto;\n  padding-top: 37px;\n  width: 50px;\n\n  ", "\n\n  ", "\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  flex: 0 0 auto;\n  padding-top: 28px;\n  width: 50px;\n\n  ", "\n\n  ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -474,21 +476,21 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 74,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 75,
       columnNumber: 7
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(NavWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 77,
       columnNumber: 7
     }
   }, routes.map(function (route) {
@@ -501,7 +503,7 @@ var Navigation = function Navigation(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 79,
         columnNumber: 11
       }
     });
@@ -509,7 +511,7 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 88,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -519,14 +521,14 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 89,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_GitHub__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 90,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -536,14 +538,14 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 92,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_CodePen__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 93,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -553,14 +555,14 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 95,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_LinkedIn__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 96,
       columnNumber: 11
     }
   }))));
@@ -596,20 +598,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 var _this = undefined,
     _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/CodePen.js";
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var _ref$fill = _ref.fill,
-      fill = _ref$fill === void 0 ? '#222' : _ref$fill;
+      fill = _ref$fill === void 0 ? utils_theme__WEBPACK_IMPORTED_MODULE_1__["default"].colors.textDefault : _ref$fill;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     fill: fill,
     viewBox: "0 0 48 48",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
+      lineNumber: 7,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -617,7 +621,7 @@ var _this = undefined,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 8,
       columnNumber: 7
     }
   }));
@@ -636,20 +640,22 @@ var _this = undefined,
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 var _this = undefined,
     _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/GitHub.js";
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var _ref$fill = _ref.fill,
-      fill = _ref$fill === void 0 ? '#222' : _ref$fill;
+      fill = _ref$fill === void 0 ? utils_theme__WEBPACK_IMPORTED_MODULE_1__["default"].colors.textDefault : _ref$fill;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     fill: fill,
     viewBox: "0 0 48 48",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
+      lineNumber: 7,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -657,7 +663,7 @@ var _this = undefined,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 8,
       columnNumber: 7
     }
   }));
@@ -676,20 +682,22 @@ var _this = undefined,
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 var _this = undefined,
     _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/LinkedIn.js";
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var _ref$fill = _ref.fill,
-      fill = _ref$fill === void 0 ? '#222' : _ref$fill;
+      fill = _ref$fill === void 0 ? utils_theme__WEBPACK_IMPORTED_MODULE_1__["default"].colors.textDefault : _ref$fill;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     fill: fill,
     viewBox: "0 0 48 48",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
+      lineNumber: 7,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -697,7 +705,7 @@ var _this = undefined,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 8,
       columnNumber: 7
     }
   }));
@@ -741,7 +749,7 @@ function _templateObject() {
 var StyledSvg = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.svg(_templateObject());
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var _ref$fill = _ref.fill,
-      fill = _ref$fill === void 0 ? '#222' : _ref$fill;
+      fill = _ref$fill === void 0 ? utils_theme__WEBPACK_IMPORTED_MODULE_3__["default"].colors.textDefault : _ref$fill;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledSvg, {
     fill: fill,
     viewBox: "0 0 867.96 303.51",
@@ -1989,14 +1997,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! cross-fetch/polyfill */ "cross-fetch/polyfill");
-/* harmony import */ var cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! cross-fetch/polyfill */ "cross-fetch/polyfill");
+/* harmony import */ var cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(cross_fetch_polyfill__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
@@ -2064,7 +2072,7 @@ var MyApp = /*#__PURE__*/function (_App) {
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_15__["ApolloProvider"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_15__["ApolloProvider"], {
         client: client,
         __self: this,
         __source: {
@@ -2072,14 +2080,14 @@ var MyApp = /*#__PURE__*/function (_App) {
           lineNumber: 38,
           columnNumber: 7
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_10__["Container"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 39,
           columnNumber: 9
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_14__["ThemeProvider"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_14__["ThemeProvider"], {
         theme: utils_theme__WEBPACK_IMPORTED_MODULE_19__["default"],
         __self: this,
         __source: {
@@ -2087,42 +2095,35 @@ var MyApp = /*#__PURE__*/function (_App) {
           lineNumber: 40,
           columnNumber: 11
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_13___default.a.Fragment, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(components_layout_GlobalStyle__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41,
-          columnNumber: 13
+          columnNumber: 15
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(components_layout_GlobalStyle__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Wrapper, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 42,
           columnNumber: 15
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(Wrapper, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, pageProps, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43,
-          columnNumber: 15
+          columnNumber: 17
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(components_layout_navigation__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(components_layout_navigation__WEBPACK_IMPORTED_MODULE_18__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44,
           columnNumber: 17
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, pageProps, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45,
-          columnNumber: 17
-        }
-      })))))));
+      })))));
     }
   }], [{
     key: "getInitialProps",
@@ -2169,7 +2170,7 @@ var MyApp = /*#__PURE__*/function (_App) {
   }]);
 
   return MyApp;
-}(next_app__WEBPACK_IMPORTED_MODULE_10___default.a);
+}(next_app__WEBPACK_IMPORTED_MODULE_11___default.a);
 
 
 
@@ -2232,19 +2233,15 @@ var media = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
-    textDefault: '#4a4a4a',
-    backgroundContent: '#f3f3f3',
+    textDefault: '#0D1A33',
+    textGrey: '#A3B1CC',
+    backgroundContent: '#F0F3FA',
     backgroundMenu: '#2E4F7B',
-    border: '#E0E5E9',
-    darkGrey: '#5F6B78',
-    lightGrey: '#FBFCFC',
-    blue: '#4597E0',
-    strainBackground: '#EAEFF4',
-    strainBorder: '#8DA0B6'
+    border: '#CFD6E5',
+    darkGrey: '#738099',
+    lightGrey: '#E1E8F5'
   },
-  fontFamilies: {
-    proxima: 'proxima-nova, sans-serif'
-  }
+  fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif'
 });
 
 /***/ }),

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -173,6 +173,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var utils_mediaQueries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/mediaQueries */ "./utils/mediaQueries.js");
+/* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 
 
 var _this = undefined,
@@ -209,7 +210,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: #9fa6ad;\n  font-family: ", ";\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 1.5;\n  margin-left: 13px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: ", ";\n  font-family: ", ";\n  font-size: 18px;\n  line-height: 1.5;\n  margin-left: 13px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -229,7 +230,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  border-bottom: 1px solid #c8ced4;\n  display: flex;\n  flex: 0 0 auto;\n  height: 72px;\n  padding-left: 34px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  border-bottom: 1px solid ", ";\n  display: flex;\n  flex: 0 0 auto;\n  height: 72px;\n  padding-left: 34px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -251,11 +252,12 @@ function _templateObject() {
 
 
 
+
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2(), utils_theme__WEBPACK_IMPORTED_MODULE_4__["default"].colors.border);
 var Emoji = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
-var Heading = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h1(_templateObject4(), function (props) {
-  return props.theme.fontFamilies.proxima;
+var Heading = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h1(_templateObject4(), utils_theme__WEBPACK_IMPORTED_MODULE_4__["default"].colors.textGrey, function (props) {
+  return props.theme.fontStack;
 });
 var ContentWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject5(), function (props) {
   return props.theme.colors.backgroundContent;
@@ -320,7 +322,7 @@ var Content = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_temp
 /*!***********************************************!*\
   !*** ./components/layout/StyledComponents.js ***!
   \***********************************************/
-/*! exports provided: Wrapper, Image, H1, Body, Paragraph, List, ListItem */
+/*! exports provided: Wrapper, Image, H1, H2, H3, Body, Paragraph, List, ListItem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -328,6 +330,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Wrapper", function() { return Wrapper; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return Image; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H1", function() { return H1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H2", function() { return H2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H3", function() { return H3; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Body", function() { return Body; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Paragraph", function() { return Paragraph; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return List; });
@@ -338,8 +342,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 
 
-function _templateObject7() {
+function _templateObject9() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  line-height: 2;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  list-style: circle inside;\n  margin-bottom: 12px;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin-bottom: 6px;\n\n  :last-child {\n    margin-bottom: 0;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -349,7 +373,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  list-style: circle inside;\n  margin-bottom: 12px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin-bottom: 30px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -359,7 +383,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin-bottom: 6px;\n\n  :last-child {\n    margin-bottom: 0;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 20px;\n  font-weight: 700;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -369,7 +393,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin-bottom: 12px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 22px;\n  font-weight: 700;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -379,7 +403,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 28px;\n\n  small {\n    display: block;\n    font-size: 0.6em;\n    line-height: 0.6em;\n    color: #666;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 28px;\n  font-weight: 700;\n  line-height: 1.5em;\n  \n  small {\n    display: block;\n    font-size: 0.6em;\n    line-height: 1em;\n    color: ", ";\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -414,11 +438,13 @@ var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_temp
   return props.fullWidth ? '100%' : '600px';
 });
 var Image = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img(_templateObject2());
-var H1 = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1(_templateObject3());
-var Body = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject4());
-var Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject5());
-var List = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.ul(_templateObject6());
-var ListItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.li(_templateObject7());
+var H1 = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1(_templateObject3(), utils_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.textGrey);
+var H2 = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h2(_templateObject4());
+var H3 = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h3(_templateObject5());
+var Body = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject6());
+var Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject7());
+var List = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.ul(_templateObject8());
+var ListItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.li(_templateObject9());
 
 /***/ }),
 
@@ -598,14 +624,14 @@ var CodeWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.pre(_
       lineNumber: 70,
       columnNumber: 13
     }
-  }, "Software developer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CodeWrapper, {
+  }, "Frontend developer & ex. graphic designer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(CodeWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73,
       columnNumber: 11
     }
-  }, Object(utils__WEBPACK_IMPORTED_MODULE_6__["splitLineBreaks"])(data.Datum.sections[0].content).map(function (line, idx) {
+  }, Object(utils__WEBPACK_IMPORTED_MODULE_6__["splitLineBreaks"])(data.Page.sections[0].content).map(function (line, idx) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       key: idx,
       __self: _this,
@@ -651,7 +677,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query GetAboutContent($id: ID!) {\n    Datum(id: $id) {\n      id\n      name\n      sections\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query GetAboutContent($id: ID!) {\n    Page(id: $id) {\n      id\n      name\n      sections\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -738,24 +764,20 @@ var media = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
-    textDefault: '#4a4a4a',
-    backgroundContent: '#f3f3f3',
+    textDefault: '#0D1A33',
+    textGrey: '#A3B1CC',
+    backgroundContent: '#F0F3FA',
     backgroundMenu: '#2E4F7B',
-    border: '#E0E5E9',
-    darkGrey: '#5F6B78',
-    lightGrey: '#FBFCFC',
-    blue: '#4597E0',
-    strainBackground: '#EAEFF4',
-    strainBorder: '#8DA0B6'
+    border: '#CFD6E5',
+    darkGrey: '#738099',
+    lightGrey: '#E1E8F5'
   },
-  fontFamilies: {
-    proxima: 'proxima-nova, sans-serif'
-  }
+  fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif'
 });
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!************************************!*\
   !*** multi ./pages/about/index.js ***!
   \************************************/
