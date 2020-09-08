@@ -133,6 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var utils_mediaQueries__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! utils/mediaQueries */ "./utils/mediaQueries.js");
+/* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 
 
 var _this = undefined,
@@ -212,9 +213,10 @@ function _templateObject() {
 
 
 
+
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2(), function (props) {
-  return props.active ? '#1D314D' : null;
+  return props.active ? utils_theme__WEBPACK_IMPORTED_MODULE_5__["default"].colors.activeLink : null;
 }, utils_mediaQueries__WEBPACK_IMPORTED_MODULE_4__["default"].desktop(_templateObject3()));
 var Emoji = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject4(), utils_mediaQueries__WEBPACK_IMPORTED_MODULE_4__["default"].desktop(_templateObject5()));
 var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a(_templateObject6(), function (props) {
@@ -231,7 +233,7 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a(_template
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -239,7 +241,7 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a(_template
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 54,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
@@ -247,14 +249,14 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a(_template
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 55,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Emoji, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 56,
       columnNumber: 11
     }
   }, emoji), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Text, {
@@ -262,7 +264,7 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a(_template
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 57,
       columnNumber: 11
     }
   }, label))));
@@ -3835,7 +3837,7 @@ function previouslyCompared(a, b) {
 /*!*****************************************************!*\
   !*** ./node_modules/apollo-boost/lib/bundle.esm.js ***!
   \*****************************************************/
-/*! exports provided: HttpLink, gql, default, ApolloClient, ApolloError, FetchType, NetworkStatus, ObservableQuery, isApolloError, Observable, getOperationName, ApolloLink, concat, createOperation, empty, execute, from, fromError, fromPromise, makePromise, split, toPromise, HeuristicFragmentMatcher, InMemoryCache, IntrospectionFragmentMatcher, ObjectCache, StoreReader, StoreWriter, WriteError, assertIdValue, defaultDataIdFromObject, defaultNormalizedCacheFactory, enhanceErrorWithDocument */
+/*! exports provided: ApolloClient, ApolloError, FetchType, NetworkStatus, ObservableQuery, isApolloError, Observable, getOperationName, ApolloLink, concat, createOperation, empty, execute, from, fromError, fromPromise, makePromise, split, toPromise, HeuristicFragmentMatcher, InMemoryCache, IntrospectionFragmentMatcher, ObjectCache, StoreReader, StoreWriter, WriteError, assertIdValue, defaultDataIdFromObject, defaultNormalizedCacheFactory, enhanceErrorWithDocument, HttpLink, gql, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27791,28 +27793,28 @@ var MyApp = /*#__PURE__*/function (_App) {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41,
-          columnNumber: 15
+          columnNumber: 13
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Wrapper, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 42,
-          columnNumber: 15
+          columnNumber: 13
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, pageProps, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43,
-          columnNumber: 17
+          columnNumber: 15
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(components_layout_navigation__WEBPACK_IMPORTED_MODULE_18__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44,
-          columnNumber: 17
+          columnNumber: 15
         }
       })))));
     }
@@ -27923,13 +27925,31 @@ var media = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
-    textDefault: '#0D1A33',
-    textGrey: '#A3B1CC',
-    backgroundContent: '#F0F3FA',
-    backgroundMenu: '#2E4F7B',
-    border: '#CFD6E5',
-    darkGrey: '#738099',
-    lightGrey: '#E1E8F5'
+    grey: {
+      100: 'hsl(219, 18%, 25%)',
+      90: 'hsl(219, 18%, 33%)',
+      80: 'hsl(219, 18%, 41%)',
+      70: 'hsl(219, 18%, 49%)',
+      60: 'hsl(219, 18%, 57%)',
+      50: 'hsl(219, 18%, 65%)',
+      40: 'hsl(219, 15%, 73%)',
+      30: 'hsl(219, 8%, 91%)',
+      20: 'hsl(219, 4%, 97%)',
+      10: 'hsl(219, 1%, 98%)'
+    },
+    textDefault: 'hsl(219, 75%, 14%)',
+    backgroundMenu: 'hsl(219, 50%, 30%)',
+    activeLink: 'hsl(219, 50%, 23%)',
+    darkGrey: 'hsl(219, 18%, 49%)',
+    //grey[70]
+    textGrey: 'hsl(219, 15%, 71%)',
+    //grey[40]
+    border: 'hsl(219, 8%, 91%)',
+    //grey[30]
+    lightGrey: 'hsl(219, 4%, 97%)',
+    //grey[20]
+    backgroundContent: 'hsl(219, 1%, 98%)' //grey[10]
+
   },
   fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif'
 });

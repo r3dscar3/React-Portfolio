@@ -4,7 +4,7 @@ import theme from 'utils/theme';
 
 export default ({ fill = theme.colors.textDefault }) => {
   return (
-    <svg viewBox='0 0 48 48'>
+    <svg fill={fill} viewBox='0 0 48 48'>
       <path
         d='M38,34c-2,0.5-4.5,0.7-5,0.4c-0.2-0.1-3.8-4.2-8-9.1c3.9-4.6,8.2-9.5,10.8-12.7c0.1,0,0.2,0,0.2-0.1l2.7-3.1l0.1,0.1
 		l0.8-0.9L38,7.2l-0.8,0.9l0.1,0.1c0,0,0,0,0,0l-2.7,3.1c-0.1,0.1-0.1,0.2-0.1,0.3c-2.6,3.1-6.8,8-10.6,12.4

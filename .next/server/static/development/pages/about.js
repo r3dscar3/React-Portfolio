@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -403,7 +403,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 28px;\n  font-weight: 700;\n  line-height: 1.5em;\n  \n  small {\n    display: block;\n    font-size: 0.6em;\n    line-height: 1em;\n    color: ", ";\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 28px;\n  font-weight: 700;\n  line-height: 1.5em;\n\n  small {\n    display: block;\n    font-size: 0.6em;\n    line-height: 1em;\n    color: ", ";\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -764,20 +764,38 @@ var media = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
-    textDefault: '#0D1A33',
-    textGrey: '#A3B1CC',
-    backgroundContent: '#F0F3FA',
-    backgroundMenu: '#2E4F7B',
-    border: '#CFD6E5',
-    darkGrey: '#738099',
-    lightGrey: '#E1E8F5'
+    grey: {
+      100: 'hsl(219, 18%, 25%)',
+      90: 'hsl(219, 18%, 33%)',
+      80: 'hsl(219, 18%, 41%)',
+      70: 'hsl(219, 18%, 49%)',
+      60: 'hsl(219, 18%, 57%)',
+      50: 'hsl(219, 18%, 65%)',
+      40: 'hsl(219, 15%, 73%)',
+      30: 'hsl(219, 8%, 91%)',
+      20: 'hsl(219, 4%, 97%)',
+      10: 'hsl(219, 1%, 98%)'
+    },
+    textDefault: 'hsl(219, 75%, 14%)',
+    backgroundMenu: 'hsl(219, 50%, 30%)',
+    activeLink: 'hsl(219, 50%, 23%)',
+    darkGrey: 'hsl(219, 18%, 49%)',
+    //grey[70]
+    textGrey: 'hsl(219, 15%, 71%)',
+    //grey[40]
+    border: 'hsl(219, 8%, 91%)',
+    //grey[30]
+    lightGrey: 'hsl(219, 4%, 97%)',
+    //grey[20]
+    backgroundContent: 'hsl(219, 1%, 98%)' //grey[10]
+
   },
   fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif'
 });
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./pages/about/index.js ***!
   \************************************/

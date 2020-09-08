@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import mediaQueries from 'utils/mediaQueries';
+import theme from 'utils/theme';
 
 const Container = styled.div`
   text-align: center;
@@ -10,7 +11,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   align-items: center;
-  background-color: ${(props) => (props.active ? '#1D314D' : null)};
+  background-color: ${(props) => (props.active ? theme.colors.activeLink : null)};
   cursor: pointer;
   display: flex;
   font-size: 14px;

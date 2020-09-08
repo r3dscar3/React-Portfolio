@@ -20,12 +20,12 @@ module.exports = {
             {
               title: 'Golf',
               description:
-                "I grew up playing golf. I am not very good, but I am not bad either. Play a round of golf sometime? Sure!",
+                'I grew up playing golf. I am not very good, but I am not bad either. Play a round of golf sometime? Sure!',
             },
             {
               title: 'Hockey',
               description:
-                "Before I ever wanted to play golf I wanted to be Bob Probert. I was not a star hockey player, but I continued to watch as a fan and I love it still (playing and watching). Some might say greatest sport in the world and I won't argue.",
+                "Before I ever wanted to play golf I wanted to be in the NHL. I got my chance, not on the ice but in the office. I love to watch and play when I get the chance. Some might say greatest sport in the world and I won't argue.",
             },
           ],
         },
@@ -34,16 +34,19 @@ module.exports = {
           content: [
             {
               title: 'React',
+              src: '/static/home/react.svg',
               description:
                 'I have been a musician for 27 years. Bass and playing in bands is a huge part of my life outside of work.',
             },
             {
-              title: 'Apollo',
+              title: 'GraphQL',
+              src: '/static/home/graphql.svg',
               description:
                 'I have been a musician for 27 years. Bass and playing in bands is a huge part of my life outside of work.',
             },
             {
               title: 'StyledComponents',
+              src: 'https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png',
               description:
                 'I have been a musician for 27 years. Bass and playing in bands is a huge part of my life outside of work.',
             },

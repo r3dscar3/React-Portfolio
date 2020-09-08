@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -403,7 +403,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 28px;\n  font-weight: 700;\n  line-height: 1.5em;\n  \n  small {\n    display: block;\n    font-size: 0.6em;\n    line-height: 1em;\n    color: ", ";\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  font-size: 28px;\n  font-weight: 700;\n  line-height: 1.5em;\n\n  small {\n    display: block;\n    font-size: 0.6em;\n    line-height: 1em;\n    color: ", ";\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -511,6 +511,7 @@ var _this = undefined,
   var _ref$fill = _ref.fill,
       fill = _ref$fill === void 0 ? utils_theme__WEBPACK_IMPORTED_MODULE_1__["default"].colors.textDefault : _ref$fill;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    fill: fill,
     viewBox: "0 0 48 48",
     __self: _this,
     __source: {
@@ -648,6 +649,7 @@ var _this = undefined,
   var _ref$fill = _ref.fill,
       fill = _ref$fill === void 0 ? utils_theme__WEBPACK_IMPORTED_MODULE_1__["default"].colors.textDefault : _ref$fill;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    fill: fill,
     viewBox: "0 0 48 48",
     __self: _this,
     __source: {
@@ -840,8 +842,28 @@ __webpack_require__.r(__webpack_exports__);
 var _this = undefined,
     _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/pages/home/Home.js";
 
+function _templateObject8() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: auto;\n  height: 100%;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 80px;\n  width: 100%;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\nposition: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: -55px;\n  width: 80px;\n  height: 80px;\n  border-radius: 100%;\n  background-color: ", ";\n  border: 1px solid ", ";\n  box-shadow: 0 5px 10px -8px ", ";\n\n  svg {\n    width: 70%;\n    height: auto;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: -55px;\n  width: 80px;\n  height: 80px;\n  border-radius: 100%;\n  background-color: ", ";\n  border: 1px solid ", ";\n  box-shadow: 0 5px 10px -8px ", ";\n\n  svg {\n    width: 70%;\n    height: auto;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -919,6 +941,8 @@ var StyledBrowser = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div
 var StyledCardsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject2(), utils_mediaQueries__WEBPACK_IMPORTED_MODULE_11__["default"].tablet(_templateObject3()));
 var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject4(), utils_theme__WEBPACK_IMPORTED_MODULE_10__["default"].colors.border, utils_mediaQueries__WEBPACK_IMPORTED_MODULE_11__["default"].tablet(_templateObject5()));
 var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject6(), utils_theme__WEBPACK_IMPORTED_MODULE_10__["default"].colors.lightGrey, utils_theme__WEBPACK_IMPORTED_MODULE_10__["default"].colors.border, utils_theme__WEBPACK_IMPORTED_MODULE_10__["default"].colors.darkGrey);
+var StyledCardImageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject7());
+var StyledCardImage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img(_templateObject8());
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useQuery"])(_queries__WEBPACK_IMPORTED_MODULE_5__["GET_HOME_CONTENT"], {
     variables: {
@@ -933,7 +957,7 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 98,
       columnNumber: 23
     }
   });
@@ -941,7 +965,7 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 99,
       columnNumber: 21
     }
   }, "Error :(");
@@ -950,24 +974,25 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 103,
       columnNumber: 20
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_Golf__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 103,
       columnNumber: 30
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_Hockey__WEBPACK_IMPORTED_MODULE_15__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 103,
       columnNumber: 40
     }
   })];
+  var Dev = [];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_PageWrapper__WEBPACK_IMPORTED_MODULE_8__["default"], {
     heading: "Welcome",
     emoji: "\uD83D\uDC4B",
@@ -975,7 +1000,7 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 107,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Wrapper"], {
@@ -983,28 +1008,28 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 108,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Body"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 109,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledBrowser, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96,
+      lineNumber: 110,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["H1"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 111,
       columnNumber: 13
     }
   }, "Hello World!"), Object(utils__WEBPACK_IMPORTED_MODULE_6__["splitLineBreaks"])(sections[0].content).map(function (line, idx) {
@@ -1013,78 +1038,10 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100,
+        lineNumber: 114,
         columnNumber: 22
       }
     }, line);
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Body"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 104,
-      columnNumber: 9
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["H2"], {
-    style: {
-      paddingBottom: 12
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105,
-      columnNumber: 11
-    }
-  }, sections[1].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardsWrapper, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106,
-      columnNumber: 11
-    }
-  }, sections[1].content.map(function (card, idx) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCard, {
-      key: idx,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 109,
-        columnNumber: 17
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardIcon, {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110,
-        columnNumber: 19
-      }
-    }, Hobbies[idx] || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_Logo__WEBPACK_IMPORTED_MODULE_13__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110,
-        columnNumber: 52
-      }
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["H3"], {
-      style: {
-        paddingTop: 15
-      },
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 111,
-        columnNumber: 19
-      }
-    }, card.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Paragraph"], {
-      style: {
-        textAlign: 'center'
-      },
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 112,
-        columnNumber: 19
-      }
-    }, card.description));
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Body"], {
     __self: _this,
     __source: {
@@ -1102,14 +1059,14 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
       lineNumber: 119,
       columnNumber: 11
     }
-  }, sections[2].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardsWrapper, {
+  }, sections[1].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardsWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 120,
       columnNumber: 11
     }
-  }, sections[2].content.map(function (card, idx) {
+  }, sections[1].content.map(function (card, idx) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCard, {
       key: idx,
       __self: _this,
@@ -1150,6 +1107,75 @@ var StyledCardIcon = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.di
       __source: {
         fileName: _jsxFileName,
         lineNumber: 126,
+        columnNumber: 19
+      }
+    }, card.description));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Body"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["H2"], {
+    style: {
+      paddingBottom: 12
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133,
+      columnNumber: 11
+    }
+  }, sections[2].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardsWrapper, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134,
+      columnNumber: 11
+    }
+  }, sections[2].content.map(function (card, idx) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCard, {
+      key: idx,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardImageWrapper, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138,
+        columnNumber: 19
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledCardImage, {
+      src: card.src,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 139,
+        columnNumber: 21
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["H3"], {
+      style: {
+        paddingTop: 15
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 141,
+        columnNumber: 19
+      }
+    }, card.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_StyledComponents__WEBPACK_IMPORTED_MODULE_7__["Paragraph"], {
+      style: {
+        textAlign: 'center'
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 142,
         columnNumber: 19
       }
     }, card.description));
@@ -1291,20 +1317,38 @@ var media = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
-    textDefault: '#0D1A33',
-    textGrey: '#A3B1CC',
-    backgroundContent: '#F0F3FA',
-    backgroundMenu: '#2E4F7B',
-    border: '#CFD6E5',
-    darkGrey: '#738099',
-    lightGrey: '#E1E8F5'
+    grey: {
+      100: 'hsl(219, 18%, 25%)',
+      90: 'hsl(219, 18%, 33%)',
+      80: 'hsl(219, 18%, 41%)',
+      70: 'hsl(219, 18%, 49%)',
+      60: 'hsl(219, 18%, 57%)',
+      50: 'hsl(219, 18%, 65%)',
+      40: 'hsl(219, 15%, 73%)',
+      30: 'hsl(219, 8%, 91%)',
+      20: 'hsl(219, 4%, 97%)',
+      10: 'hsl(219, 1%, 98%)'
+    },
+    textDefault: 'hsl(219, 75%, 14%)',
+    backgroundMenu: 'hsl(219, 50%, 30%)',
+    activeLink: 'hsl(219, 50%, 23%)',
+    darkGrey: 'hsl(219, 18%, 49%)',
+    //grey[70]
+    textGrey: 'hsl(219, 15%, 71%)',
+    //grey[40]
+    border: 'hsl(219, 8%, 91%)',
+    //grey[30]
+    lightGrey: 'hsl(219, 4%, 97%)',
+    //grey[20]
+    backgroundContent: 'hsl(219, 1%, 98%)' //grey[10]
+
   },
   fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif'
 });
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

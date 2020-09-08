@@ -38,11 +38,11 @@ export default class MyApp extends App {
       <ApolloProvider client={client}>
         <Container>
           <ThemeProvider theme={theme}>
-              <GlobalStyle />
-              <Wrapper>
-                <Component {...pageProps} />
-                <Navigation />
-              </Wrapper>
+            <GlobalStyle />
+            <Wrapper>
+              <Component {...pageProps} />
+              <Navigation />
+            </Wrapper>
           </ThemeProvider>
         </Container>
       </ApolloProvider>

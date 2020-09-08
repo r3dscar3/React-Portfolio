@@ -57,7 +57,7 @@ const StyledCard = styled.div`
 `;
 
 const StyledCardIcon = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +75,19 @@ position: relative;
   }
 `;
 
+const StyledCardImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+`;
+
+const StyledCardImage = styled.img`
+  width: auto;
+  height: 100%;
+`;
+
 export default () => {
   const { loading, error, data } = useQuery(GET_HOME_CONTENT, {
     variables: {
@@ -88,6 +101,7 @@ export default () => {
   const { sections } = data.Page;
 
   const Hobbies = [<Bass />, <Golf />, <Hockey />];
+  const Dev = [];
 
   return (
     <PageWrapper heading='Welcome' emoji='👋' fullWidth>
@@ -121,7 +135,9 @@ export default () => {
             {sections[2].content.map((card, idx) => {
               return (
                 <StyledCard key={idx}>
-                  <StyledCardIcon>{Hobbies[idx] || <Logo />}</StyledCardIcon>
+                  <StyledCardImageWrapper>
+                    <StyledCardImage src={card.src} />
+                  </StyledCardImageWrapper>  
                   <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
                   <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
                 </StyledCard>

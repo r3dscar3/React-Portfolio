@@ -19,7 +19,7 @@ export const H1 = styled.h1`
   font-size: 28px;
   font-weight: 700;
   line-height: 1.5em;
-  
+
   small {
     display: block;
     font-size: 0.6em;
