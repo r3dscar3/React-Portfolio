@@ -15,4 +15,4 @@ const nextConfig = {
   },
 }
 
-module.export = plugins(nextConfig);
+module.exports = plugins(nextConfig);
