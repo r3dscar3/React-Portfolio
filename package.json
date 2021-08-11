@@ -10,7 +10,7 @@
     "cleanup": "prettier --write .",
     "server": "node index.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 8080"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
