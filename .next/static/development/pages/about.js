@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/Loader.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/Loader.js";
 
 function _templateObject2() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  height: 40px;\n  width: 40px;\n  margin: 0 auto;\n\n  &:before {\n    content: '';\n    box-sizing: border-box;\n    position: absolute;\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n    border: 3px solid ", ";\n    border-top-color: transparent;\n    animation: spinner 0.4s linear infinite;\n\n    @keyframes spinner {\n      to {\n        transform: rotate(360deg);\n      }\n    }\n  }\n"]);
@@ -82,7 +82,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/PageWrapper.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/PageWrapper.js";
 
 function _templateObject7() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  max-width: ", ";\n"]);
@@ -29640,9 +29640,9 @@ function concatArrays(originVal, newVal) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2F036CC3B1-6026-4531-A0B4-6FACA72B9EB5%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FE7A98CFE-580A-4908-B32B-FD2E2E84F2E7%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js!./":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2F036CC3B1-6026-4531-A0B4-6FACA72B9EB5%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FE7A98CFE-580A-4908-B32B-FD2E2E84F2E7%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -35042,7 +35042,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/pages/about/About.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/pages/about/About.js";
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  white-space: pre-wrap;\n  display: flex;\n  flex-direction: column;\n  font-family: monospace;\n  background-color: #fff;\n  width: em(440);\n  margin: 30px auto;\n  padding: 8px;\n  border-radius: 0.25em;\n  line-height: 0;\n  counter-reset: line;\n  border: 1px solid ", ";\n\n  span {\n    min-height: 1.5rem;\n    display: block;\n    position: relative;\n    padding-left: 45px;\n    max-width: em(400);\n    line-height: 1.5rem;\n\n    &:before {\n      position: absolute;\n      left: 0;\n      text-align: right;\n      width: 20px;\n      height: 100%;\n      counter-increment: line;\n      content: counter(line);\n      display: inline-block;\n      border-right: 1px solid ", ";\n      padding: 0 8px;\n      color: ", ";\n    }\n  }\n"]);
@@ -35275,7 +35275,7 @@ __webpack_require__.r(__webpack_exports__);
       50: 'hsl(219, 18%, 65%)',
       40: 'hsl(219, 15%, 73%)',
       30: 'hsl(219, 8%, 91%)',
-      20: 'hsl(219, 4%, 97%)',
+      20: 'hsl(219, 5%, 97%)',
       10: 'hsl(219, 1%, 98%)'
     },
     textDefault: 'hsl(219, 75%, 14%)',
@@ -35287,7 +35287,7 @@ __webpack_require__.r(__webpack_exports__);
     //grey[40]
     border: 'hsl(219, 8%, 91%)',
     //grey[30]
-    lightGrey: 'hsl(219, 4%, 97%)',
+    lightGrey: 'hsl(219, 5%, 97%)',
     //grey[20]
     backgroundContent: 'hsl(219, 1%, 98%)' //grey[10]
 
@@ -35299,12 +35299,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 1:
 /*!************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2F036CC3B1-6026-4531-A0B4-6FACA72B9EB5%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js ***!
+  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FE7A98CFE-580A-4908-B32B-FD2E2E84F2E7%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js ***!
   \************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2F036CC3B1-6026-4531-A0B4-6FACA72B9EB5%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2F036CC3B1-6026-4531-A0B4-6FACA72B9EB5%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FE7A98CFE-580A-4908-B32B-FD2E2E84F2E7%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fprivate%2Fvar%2Fmobile%2FContainers%2FData%2FApplication%2FE7A98CFE-580A-4908-B32B-FD2E2E84F2E7%2FDocuments%2Fapps%2FREACT%20PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8%2Fsrc%2Fpages%2Fabout%2Findex.js!./");
 
 
 /***/ }),

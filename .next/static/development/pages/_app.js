@@ -50,7 +50,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/Logo.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/Logo.js";
 
 function _templateObject3() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: block;\n"]);
@@ -137,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/navigation/NavLink.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/navigation/NavLink.js";
 
 function _templateObject7() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline;\n  "]);
@@ -296,7 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/navigation/Navigation.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/components/layout/navigation/Navigation.js";
 
 function _templateObject5() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin-top: auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-bottom: 30px;\n\n  svg {\n    width: 26px;\n    height: 26px;\n    margin: 5px 0;\n  }\n"]);
@@ -373,6 +373,11 @@ var routes = [{
   key: 'about',
   label: 'About',
   pathname: '/about'
+}, {
+  emoji: '✉️',
+  key: 'contact',
+  label: 'Contact',
+  pathname: '/contact'
 }];
 
 var Navigation = function Navigation(props) {
@@ -381,21 +386,21 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 80,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(components_layout_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 81,
       columnNumber: 7
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(NavWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 83,
       columnNumber: 7
     }
   }, routes.map(function (route) {
@@ -408,7 +413,7 @@ var Navigation = function Navigation(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 85,
         columnNumber: 11
       }
     });
@@ -416,7 +421,7 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 94,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -426,14 +431,14 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
+      lineNumber: 95,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_GitHub__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 96,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -443,14 +448,14 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 98,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_CodePen__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 99,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -460,14 +465,14 @@ var Navigation = function Navigation(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 101,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(icons_LinkedIn__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96,
+      lineNumber: 102,
       columnNumber: 11
     }
   }))));
@@ -505,7 +510,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/CodePen.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/CodePen.js";
 
 
 
@@ -547,7 +552,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/GitHub.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/GitHub.js";
 
 
 
@@ -589,7 +594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var utils_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! utils/theme */ "./utils/theme.js");
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/LinkedIn.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/LinkedIn.js";
 
 
 
@@ -635,7 +640,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/Logo.js";
+    _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/icons/Logo.js";
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  path:not(:nth-of-type(3)) {\n    isolation: isolate;\n    opacity: 0.2;\n    mix-blend-mode: multiply;\n  }\n"]);
@@ -3837,7 +3842,7 @@ function previouslyCompared(a, b) {
 /*!*****************************************************!*\
   !*** ./node_modules/apollo-boost/lib/bundle.esm.js ***!
   \*****************************************************/
-/*! exports provided: ApolloClient, ApolloError, FetchType, NetworkStatus, ObservableQuery, isApolloError, Observable, getOperationName, ApolloLink, concat, createOperation, empty, execute, from, fromError, fromPromise, makePromise, split, toPromise, HeuristicFragmentMatcher, InMemoryCache, IntrospectionFragmentMatcher, ObjectCache, StoreReader, StoreWriter, WriteError, assertIdValue, defaultDataIdFromObject, defaultNormalizedCacheFactory, enhanceErrorWithDocument, HttpLink, gql, default */
+/*! exports provided: HttpLink, gql, default, ApolloClient, ApolloError, FetchType, NetworkStatus, ObservableQuery, isApolloError, Observable, getOperationName, ApolloLink, concat, createOperation, empty, execute, from, fromError, fromPromise, makePromise, split, toPromise, HeuristicFragmentMatcher, InMemoryCache, IntrospectionFragmentMatcher, ObjectCache, StoreReader, StoreWriter, WriteError, assertIdValue, defaultDataIdFromObject, defaultNormalizedCacheFactory, enhanceErrorWithDocument */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27717,7 +27722,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/pages/_app.js";
+var _jsxFileName = "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/pages/_app.js";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__["default"])(this).constructor; result = _babel_runtime_corejs2_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default()(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__["default"])(this, result); }; }
 
@@ -27802,21 +27807,21 @@ var MyApp = /*#__PURE__*/function (_App) {
           lineNumber: 42,
           columnNumber: 13
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, pageProps, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(components_layout_navigation__WEBPACK_IMPORTED_MODULE_18__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43,
           columnNumber: 15
         }
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(components_layout_navigation__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, pageProps, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 44,
           columnNumber: 15
         }
-      })))));
+      }))))));
     }
   }], [{
     key: "getInitialProps",
@@ -27934,7 +27939,7 @@ __webpack_require__.r(__webpack_exports__);
       50: 'hsl(219, 18%, 65%)',
       40: 'hsl(219, 15%, 73%)',
       30: 'hsl(219, 8%, 91%)',
-      20: 'hsl(219, 4%, 97%)',
+      20: 'hsl(219, 5%, 97%)',
       10: 'hsl(219, 1%, 98%)'
     },
     textDefault: 'hsl(219, 75%, 14%)',
@@ -27946,7 +27951,7 @@ __webpack_require__.r(__webpack_exports__);
     //grey[40]
     border: 'hsl(219, 8%, 91%)',
     //grey[30]
-    lightGrey: 'hsl(219, 4%, 97%)',
+    lightGrey: 'hsl(219, 5%, 97%)',
     //grey[20]
     backgroundContent: 'hsl(219, 1%, 98%)' //grey[10]
 

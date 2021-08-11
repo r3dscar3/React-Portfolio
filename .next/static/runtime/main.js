@@ -7543,7 +7543,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "/private/var/mobile/Containers/Data/Application/036CC3B1-6026-4531-A0B4-6FACA72B9EB5/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/.next");
+      source_map_support_1.rewriteStacktrace(error, "/private/var/mobile/Containers/Data/Application/E7A98CFE-580A-4908-B32B-FD2E2E84F2E7/Documents/apps/REACT PORTFOLIO7177FA5C-A9B2-4794-8364-6B285E6119A8/src/.next");
       return error;
     }
   };

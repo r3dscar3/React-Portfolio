@@ -2,7 +2,7 @@ const express = require('express');
 const jsonGraphqlExpress = require('json-graphql-server');
 const data = require('./data');
 const cors = require('cors');
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 const app = express();
 
 app.use(cors());

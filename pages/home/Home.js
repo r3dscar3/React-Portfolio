@@ -52,7 +52,7 @@ const StyledCard = styled.div`
   margin: 35px 0;
 
   ${mediaQueries.tablet`
-    flex: 0 0 calc(33.33% - 20px);
+      flex: 0 0 calc(${props => props.count <= 4 ? 100 / props.count : 50}% - 20px);
   `}
 `;
 
@@ -120,7 +120,7 @@ export default () => {
           <StyledCardsWrapper>
             {sections[1].content.map((card, idx) => {
               return (
-                <StyledCard key={idx}>
+                <StyledCard count={sections[1].content.length} key={idx}>
                   <StyledCardIcon>{Hobbies[idx] || <Logo />}</StyledCardIcon>
                   <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
                   <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
@@ -134,12 +134,12 @@ export default () => {
           <StyledCardsWrapper>
             {sections[2].content.map((card, idx) => {
               return (
-                <StyledCard key={idx}>
+                <StyledCard count={sections[2].content.length} key={idx}>
                   <StyledCardImageWrapper>
                     <StyledCardImage src={card.src} />
                   </StyledCardImageWrapper>  
                   <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
-                  <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
+                  <Styled.Paragraph style={{ textAlign: 'center' }}>{card.years} years of professional experience</Styled.Paragraph>
                 </StyledCard>
               );
             })}

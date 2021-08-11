@@ -11,6 +11,8 @@ import Navigation from 'components/layout/navigation';
 
 import theme from 'utils/theme';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
@@ -18,7 +20,7 @@ const Wrapper = styled.div`
 `;
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
+  uri: isProd ? 'https://api.pgdbend.com' : 'http://localhost:4000',
 });
 
 export default class MyApp extends App {
@@ -40,8 +42,8 @@ export default class MyApp extends App {
           <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Wrapper>
-              <Component {...pageProps} />
               <Navigation />
+              <Component {...pageProps} />
             </Wrapper>
           </ThemeProvider>
         </Container>

@@ -65,6 +65,12 @@ const routes = [
     label: 'About',
     pathname: '/about',
   },
+  {
+    emoji: '✉️',
+    key: 'contact',
+    label: 'Contact',
+    pathname: '/contact',
+  },
 ];
 
 const Navigation = (props) => {
