@@ -4,17 +4,13 @@ import styled from 'styled-components';
 import theme from 'utils/theme';
 
 const StyledLoader = styled.div`
-  position: fixed;
+  position: absolute;
   width: 100%;
   max-width: 100%;
-  height: 100%;
+  height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-color: #fff;
   z-index: 666;
 `;

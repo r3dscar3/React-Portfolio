@@ -51,32 +51,37 @@ const CodeWrapper = styled.pre`
   }
 `;
 
-export default () => {
+const About = () => {
   const { loading, error, data } = useQuery(GET_ABOUT_CONTENT, {
     variables: {
       id: 2,
     },
   });
 
-  if (loading) return <Loader />;
   if (error) return <p>Error :(</p>;
 
   return (
-    <PageWrapper heading='About' emoji='☠️'>
-      <Styled.Wrapper>
-        <Styled.Body>
-          <Styled.H1>
-            Nolan Thompson
-            <small>Frontend developer & ex. graphic designer</small>
-          </Styled.H1>
+    <PageWrapper heading={data?.page.name} emoji='☠️'>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Styled.Wrapper>
+          <Styled.Body>
+            <Styled.H1>
+              Nolan Thompson
+              <small>Frontend developer & ex. graphic designer</small>
+            </Styled.H1>
 
-          <CodeWrapper>
-            {splitLineBreaks(data.Page.sections[0].content).map((line, idx) => {
-              return <span key={idx}>{line}</span>;
-            })}
-          </CodeWrapper>
-        </Styled.Body>
-      </Styled.Wrapper>
+            <CodeWrapper>
+              {splitLineBreaks(data.page.sections[0].sectionItems[0].description).map((line, idx) => {
+                return <span key={idx}>{line}</span>;
+              })}
+            </CodeWrapper>
+          </Styled.Body>
+        </Styled.Wrapper>
+      )}
     </PageWrapper>
   );
 };
+
+export default About;

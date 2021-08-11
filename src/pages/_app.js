@@ -1,8 +1,7 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import 'cross-fetch/polyfill';
-import Head from 'next/head';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
@@ -36,15 +35,13 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ApolloProvider client={client}>
-        <Container>
-          <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Wrapper>
-              <Navigation />
-              <Component {...pageProps} />
-            </Wrapper>
-          </ThemeProvider>
-        </Container>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Wrapper>
+            <Navigation />
+            <Component {...pageProps} />
+          </Wrapper>
+        </ThemeProvider>
       </ApolloProvider>
     );
   }
