@@ -47,6 +47,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Content = styled.div`
+  position: relative;
   max-width: ${(props) => (props.fullWidth ? '100%' : '768px')};
 `;
 
