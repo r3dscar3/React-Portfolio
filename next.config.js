@@ -17,6 +17,7 @@ const nextConfig = {
       'icons',
       'utils',
       'pages',
+      'queries',
     ];
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -24,6 +25,7 @@ const nextConfig = {
       utils: path.resolve(__dirname, 'src/utils'),
       icons: path.resolve(__dirname, 'src/icons'),
       pages: path.resolve(__dirname, 'src/pages'),
+      queries: path.resolve(__dirname, 'src/queries'),
     };
 
     return config;

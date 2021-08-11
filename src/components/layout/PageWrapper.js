@@ -50,7 +50,7 @@ const Content = styled.div`
   max-width: ${(props) => (props.fullWidth ? '100%' : '768px')};
 `;
 
-export default (props) => {
+const PageWrapper = (props) => {
   const { children, heading, emoji, fullWidth } = props;
 
   return (
@@ -66,3 +66,5 @@ export default (props) => {
     </Container>
   );
 };
+
+export default PageWrapper;

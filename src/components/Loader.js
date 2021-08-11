@@ -40,10 +40,12 @@ const LoadingSpinner = styled.div`
   }
 `;
 
-export default () => {
+const Loader = () => {
   return (
     <StyledLoader>
       <LoadingSpinner />
     </StyledLoader>
   );
 };
+
+export default Loader;

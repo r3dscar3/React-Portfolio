@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useQuery } from '@apollo/react-hooks';
 
-import { GET_HOME_CONTENT } from './queries';
+import { GET_HOME_CONTENT } from 'queries/home';
 
 import { splitLineBreaks } from 'utils';
 

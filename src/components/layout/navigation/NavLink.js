@@ -46,7 +46,7 @@ const Text = styled.a`
   `}
 `;
 
-export default (props) => {
+const NavLink = (props) => {
   const { active, emoji, label, pathname } = props;
 
   return (
@@ -60,3 +60,5 @@ export default (props) => {
     </Container>
   );
 };
+
+export default NavLink;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import mediaQueries from 'utils/mediaQueries';
 
-import Logo from 'icons/Logo';
+import { Logo as Glasses } from 'icons/Logo';
 
 const Container = styled.div`
   cursor: pointer;
@@ -16,16 +16,14 @@ const Container = styled.div`
   `}
 `;
 
-const Image = styled.img`
-  display: block;
-`;
-
-export default () => {
+const Logo = () => {
   return (
     <Link href='/'>
       <Container>
-        <Logo />
+        <Glasses />
       </Container>
     </Link>
   );
 };
+
+export default Logo;
