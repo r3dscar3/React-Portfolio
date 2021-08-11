@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useQuery } from '@apollo/react-hooks';
 
-import { GET_HOME_CONTENT } from 'queries/home';
+import GET_HOME_CONTENT from 'queries/home';
 
 import { splitLineBreaks } from 'utils';
 
@@ -15,7 +15,7 @@ import theme from 'utils/theme';
 import mediaQueries from 'utils/mediaQueries';
 
 import Bass from 'icons/Bass';
-import Logo from 'icons/Logo';
+import Glasses from 'icons/Glasses';
 import Golf from 'icons/Golf';
 import Hockey from 'icons/Hockey';
 
@@ -126,7 +126,7 @@ const Home = () => {
               {sections[1].sectionItems.map((card, idx) => {
                 return (
                   <StyledCard count={sections[1].sectionItems.length} key={idx}>
-                    <StyledCardIcon>{Hobbies[idx] || <Logo />}</StyledCardIcon>
+                    <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
                     <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
                     <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
                   </StyledCard>

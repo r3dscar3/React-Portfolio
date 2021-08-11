@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import mediaQueries from 'utils/mediaQueries';
 
-import { Logo as Glasses } from 'icons/Logo';
+import Glasses from 'icons/Glasses';
 
 const Container = styled.div`
   cursor: pointer;

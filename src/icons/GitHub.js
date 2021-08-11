@@ -2,7 +2,7 @@ import React from 'react';
 
 import theme from 'utils/theme';
 
-export default ({ fill = theme.colors.textDefault }) => {
+const GitHub = ({ fill = theme.colors.textDefault }) => {
   return (
     <svg fill={fill} viewBox='0 0 48 48'>
       <path
@@ -16,3 +16,5 @@ export default ({ fill = theme.colors.textDefault }) => {
     </svg>
   );
 };
+
+export default GitHub;
