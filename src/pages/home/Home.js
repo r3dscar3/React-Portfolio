@@ -98,21 +98,25 @@ export default () => {
   if (loading) return <Loader />;
   if (error) return <p>Error :(</p>;
 
-  const { title, description, sections } = data.page;
+  const { name, description, sections } = data.page;
 
   const Hobbies = [<Bass />, <Golf />, <Hockey />];
   const Dev = [];
 
   return (
-    <PageWrapper heading={title} emoji='👋' fullWidth>
+    <PageWrapper heading={name} emoji='👋' fullWidth>
       <Styled.Wrapper fullWidth>
         <Styled.Body>
           <StyledBrowser>
-            <Styled.H1>{title}</Styled.H1>
+            <Styled.H1>{name}</Styled.H1>
 
-            {splitLineBreaks(sections[0].sectionItems).map((line, idx) => {
-              return <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>;
-            })}
+            {sections[0].sectionItems.map((item, idx) => (
+              <div>
+                {splitLineBreaks(item).map((line, idx) => (
+                  <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>
+                ))}
+              </div>
+            ))}
           </StyledBrowser>
         </Styled.Body>
         <Styled.Body>
