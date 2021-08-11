@@ -7,7 +7,7 @@ const nextConfig = {
   env: {
     API_URL: isProd ? 'https://api.pgdbend.com' : 'http://localhost:4000',
   },
-  webpack(config, options) {
+  webpack: (config) => {
     config.resolve.alias['components'] = path.join(__dirname, 'components');
     config.resolve.alias['utils'] = path.join(__dirname, 'utils');
     config.resolve.alias['icons'] = path.join(__dirname, 'icons');
@@ -15,4 +15,4 @@ const nextConfig = {
   },
 }
 
-module.exports = plugins(nextConfig);
+module.exports = plugins([], nextConfig);
