@@ -98,19 +98,19 @@ export default () => {
   if (loading) return <Loader />;
   if (error) return <p>Error :(</p>;
 
-  const { sections } = data.Page;
+  const { title, description, sections } = data.page;
 
   const Hobbies = [<Bass />, <Golf />, <Hockey />];
   const Dev = [];
 
   return (
-    <PageWrapper heading='Welcome' emoji='👋' fullWidth>
+    <PageWrapper heading={title} emoji='👋' fullWidth>
       <Styled.Wrapper fullWidth>
         <Styled.Body>
           <StyledBrowser>
-            <Styled.H1>Hello World!</Styled.H1>
+            <Styled.H1>{title}</Styled.H1>
 
-            {splitLineBreaks(sections[0].content).map((line, idx) => {
+            {splitLineBreaks(sections[0].sectionItems).map((line, idx) => {
               return <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>;
             })}
           </StyledBrowser>
@@ -118,9 +118,9 @@ export default () => {
         <Styled.Body>
           <Styled.H2 style={{ paddingBottom: 12 }}>{sections[1].title}</Styled.H2>
           <StyledCardsWrapper>
-            {sections[1].content.map((card, idx) => {
+            {sections[1].sectionItems.map((card, idx) => {
               return (
-                <StyledCard count={sections[1].content.length} key={idx}>
+                <StyledCard count={sections[1].sectionItems.length} key={idx}>
                   <StyledCardIcon>{Hobbies[idx] || <Logo />}</StyledCardIcon>
                   <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
                   <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
@@ -132,9 +132,9 @@ export default () => {
         <Styled.Body>
           <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
           <StyledCardsWrapper>
-            {sections[2].content.map((card, idx) => {
+            {sections[2].sectionItems.map((card, idx) => {
               return (
-                <StyledCard count={sections[2].content.length} key={idx}>
+                <StyledCard count={sections[2].sectionItems.length} key={idx}>
                   <StyledCardImageWrapper>
                     <StyledCardImage src={card.src} />
                   </StyledCardImageWrapper>
