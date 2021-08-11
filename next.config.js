@@ -4,15 +4,30 @@ const plugins = require('next-compose-plugins');
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
+  distDir: './dist',
   env: {
     API_URL: isProd ? 'https://api.pgdbend.com' : 'http://localhost:4000',
   },
   webpack: (config) => {
-    config.resolve.alias['components'] = path.join(__dirname, 'components');
-    config.resolve.alias['utils'] = path.join(__dirname, 'utils');
-    config.resolve.alias['icons'] = path.join(__dirname, 'icons');
+    config.resolve.modules = [
+      'node_modules',
+      path.join(__dirname, 'src'),
+      path.join(__dirname, 'src/static'),
+      'components',
+      'icons',
+      'utils',
+      'pages',
+    ];
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      components: path.resolve(__dirname, 'src/components'),
+      utils: path.resolve(__dirname, 'src/utils'),
+      icons: path.resolve(__dirname, 'src/icons'),
+      pages: path.resolve(__dirname, 'src/pages'),
+    };
+
     return config;
   },
-}
+};
 
 module.exports = plugins([], nextConfig);
