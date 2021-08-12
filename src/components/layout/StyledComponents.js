@@ -5,7 +5,7 @@ import theme from 'utils/theme';
 export const Wrapper = styled.div`
   font-size: 16px;
   line-height: 1.5;
-  max-width: ${(props) => (props.fullWidth ? '100%' : '600px')};
+  max-width: 100%;
 `;
 
 export const Image = styled.img`
