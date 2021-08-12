@@ -6,12 +6,74 @@ import { useQuery } from '@apollo/react-hooks';
 import GET_ABOUT_CONTENT from 'queries/about';
 
 import { splitLineBreaks } from 'utils';
+import theme from 'utils/theme';
+import mediaQueries from 'utils/mediaQueries';
 
 import * as Styled from 'components/layout/StyledComponents';
 import PageWrapper from 'components/layout/PageWrapper';
-import Loader from 'components/Loader';
 
-import theme from 'utils/theme';
+import Bass from 'icons/Bass';
+import Glasses from 'icons/Glasses';
+import Golf from 'icons/Golf';
+import Hockey from 'icons/Hockey';
+
+const StyledCardsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  ${mediaQueries.tablet`
+    flex-direction: row;
+    justify-content: space-between;
+  `}
+`;
+
+const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid ${theme.colors.border};
+  border-radius: 8px;
+  background: #fff;
+  margin: 35px 0;
+
+  ${mediaQueries.tablet`
+      flex: 0 0 calc(${(props) => (props.count <= 4 ? 100 / props.count : 50)}% - 20px);
+  `}
+`;
+
+const StyledCardIcon = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -55px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: ${theme.colors.lightGrey};
+  border: 1px solid ${theme.colors.border};
+  box-shadow: 0 5px 10px -8px ${theme.colors.darkGrey};
+
+  svg {
+    width: 70%;
+    height: auto;
+  }
+`;
+
+const StyledCardImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+`;
+
+const StyledCardImage = styled.img`
+  width: auto;
+  height: 100%;
+`;
 
 const CodeWrapper = styled.pre`
   white-space: pre-wrap;
@@ -51,6 +113,8 @@ const CodeWrapper = styled.pre`
   }
 `;
 
+const Hobbies = [<Bass />, <Golf />, <Hockey />];
+
 const About = () => {
   const { loading, error, data } = useQuery(GET_ABOUT_CONTENT, {
     variables: {
@@ -61,20 +125,54 @@ const About = () => {
   if (loading) return <PageWrapper />;
   if (error) return <p>Error :(</p>;
 
+  const { name, sections } = data?.page || {};
+
   return (
-    <PageWrapper heading={data?.page.name} emoji='☠️'>
+    <PageWrapper heading={name} emoji='☠️'>
       <Styled.Wrapper>
         <Styled.Body>
           <Styled.H1>
-            Nolan Thompson
-            <small>Frontend developer & ex. graphic designer</small>
+            {sections[0].title}
+            <small>{sections[0].description}</small>
           </Styled.H1>
 
           <CodeWrapper>
-            {splitLineBreaks(data.page.sections[0].sectionItems[0].description).map((line, idx) => {
+            {splitLineBreaks(sections[1].sectionItems[0].description).map((line, idx) => {
               return <span key={idx}>{line}</span>;
             })}
           </CodeWrapper>
+        </Styled.Body>
+        <Styled.Body>
+          <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
+          <StyledCardsWrapper>
+            {sections[2].sectionItems.map((card, idx) => {
+              return (
+                <StyledCard count={sections[2].sectionItems.length} key={idx}>
+                  <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
+                  <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
+                  <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
+                </StyledCard>
+              );
+            })}
+          </StyledCardsWrapper>
+        </Styled.Body>
+        <Styled.Body>
+          <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
+          <StyledCardsWrapper>
+            {sections[3].sectionItems.map((card, idx) => {
+              return (
+                <StyledCard count={sections[3].sectionItems.length} key={idx}>
+                  <StyledCardImageWrapper>
+                    <StyledCardImage src={card.src} />
+                  </StyledCardImageWrapper>
+                  <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
+                  <Styled.Paragraph style={{ textAlign: 'center' }}>
+                    {card.years} years of professional experience
+                  </Styled.Paragraph>
+                </StyledCard>
+              );
+            })}
+          </StyledCardsWrapper>
         </Styled.Body>
       </Styled.Wrapper>
     </PageWrapper>

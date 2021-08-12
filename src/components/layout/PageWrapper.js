@@ -51,7 +51,7 @@ const ContentWrapper = styled.div`
 const Content = styled.div`
   position: relative;
   width: 100%;
-  max-width: ${(props) => (props.fullWidth ? '1200px' : '768px')};
+  max-width: 1200px;
 `;
 
 const PageWrapper = (props) => {
@@ -68,7 +68,7 @@ const PageWrapper = (props) => {
 
       <ContentWrapper>
         {!children && <Loader />}
-        <Content fullWidth={fullWidth}>{children}</Content>
+        <Content>{children}</Content>
       </ContentWrapper>
     </Container>
   );
