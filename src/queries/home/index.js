@@ -9,10 +9,13 @@ const GET_HOME_CONTENT = gql`
       sections {
         id
         title
+        description
         sectionItems {
           id
           title
           description
+          years
+          src
         }
       }
     }
