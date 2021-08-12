@@ -66,9 +66,8 @@ const PageWrapper = (props) => {
         </Header>
       )}
 
-      {!children && <Loader />}
-
       <ContentWrapper>
+        {!children && <Loader />}
         <Content fullWidth={fullWidth}>{children}</Content>
       </ContentWrapper>
     </Container>
