@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import mediaQueries from 'utils/mediaQueries';
 import theme from 'utils/theme';
 
+import Loader from 'components/Loader';
+
 const Container = styled.div`
   display: flex;
   height: 100%;
@@ -48,7 +50,8 @@ const ContentWrapper = styled.div`
 
 const Content = styled.div`
   position: relative;
-  max-width: ${(props) => (props.fullWidth ? '100%' : '768px')};
+  width: 100%;
+  max-width: ${(props) => (props.fullWidth ? '1200px' : '768px')};
 `;
 
 const PageWrapper = (props) => {
@@ -56,10 +59,14 @@ const PageWrapper = (props) => {
 
   return (
     <Container>
-      <Header>
-        <Emoji>{emoji}</Emoji>
-        <Heading>{heading}</Heading>
-      </Header>
+      {heading && (
+        <Header>
+          <Emoji>{emoji}</Emoji>
+          <Heading>{heading}</Heading>
+        </Header>
+      )}
+
+      {!children && <Loader />}
 
       <ContentWrapper>
         <Content fullWidth={fullWidth}>{children}</Content>

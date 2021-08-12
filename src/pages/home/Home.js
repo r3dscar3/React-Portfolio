@@ -9,7 +9,6 @@ import { splitLineBreaks } from 'utils';
 
 import * as Styled from 'components/layout/StyledComponents';
 import PageWrapper from 'components/layout/PageWrapper';
-import Loader from 'components/Loader';
 
 import theme from 'utils/theme';
 import mediaQueries from 'utils/mediaQueries';
@@ -95,6 +94,7 @@ const Home = () => {
     },
   });
 
+  if (loading) return <PageWrapper />;
   if (error) return <p>Error :(</p>;
 
   const { name, description, sections } = data?.page || {};
@@ -103,57 +103,53 @@ const Home = () => {
 
   return (
     <PageWrapper heading={name || ''} emoji='👋' fullWidth>
-      {loading ? (
-        <Loader />
-      ) : (
-        <Styled.Wrapper fullWidth>
-          <Styled.Body>
-            <StyledBrowser>
-              <Styled.H1>{name}</Styled.H1>
+      <Styled.Wrapper fullWidth>
+        <Styled.Body>
+          <StyledBrowser>
+            <Styled.H1>{name}</Styled.H1>
 
-              {sections[0].sectionItems.map((item, idx) => (
-                <div key={idx}>
-                  {splitLineBreaks(item.description).map((line, idx) => (
-                    <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>
-                  ))}
-                </div>
-              ))}
-            </StyledBrowser>
-          </Styled.Body>
-          <Styled.Body>
-            <Styled.H2 style={{ paddingBottom: 12 }}>{sections[1].title}</Styled.H2>
-            <StyledCardsWrapper>
-              {sections[1].sectionItems.map((card, idx) => {
-                return (
-                  <StyledCard count={sections[1].sectionItems.length} key={idx}>
-                    <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
-                    <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
-                    <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
-                  </StyledCard>
-                );
-              })}
-            </StyledCardsWrapper>
-          </Styled.Body>
-          <Styled.Body>
-            <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
-            <StyledCardsWrapper>
-              {sections[2].sectionItems.map((card, idx) => {
-                return (
-                  <StyledCard count={sections[2].sectionItems.length} key={idx}>
-                    <StyledCardImageWrapper>
-                      <StyledCardImage src={card.src} />
-                    </StyledCardImageWrapper>
-                    <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
-                    <Styled.Paragraph style={{ textAlign: 'center' }}>
-                      {card.years} years of professional experience
-                    </Styled.Paragraph>
-                  </StyledCard>
-                );
-              })}
-            </StyledCardsWrapper>
-          </Styled.Body>
-        </Styled.Wrapper>
-      )}
+            {sections[0].sectionItems.map((item, idx) => (
+              <div key={idx}>
+                {splitLineBreaks(item.description).map((line, idx) => (
+                  <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>
+                ))}
+              </div>
+            ))}
+          </StyledBrowser>
+        </Styled.Body>
+        <Styled.Body>
+          <Styled.H2 style={{ paddingBottom: 12 }}>{sections[1].title}</Styled.H2>
+          <StyledCardsWrapper>
+            {sections[1].sectionItems.map((card, idx) => {
+              return (
+                <StyledCard count={sections[1].sectionItems.length} key={idx}>
+                  <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
+                  <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
+                  <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
+                </StyledCard>
+              );
+            })}
+          </StyledCardsWrapper>
+        </Styled.Body>
+        <Styled.Body>
+          <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
+          <StyledCardsWrapper>
+            {sections[2].sectionItems.map((card, idx) => {
+              return (
+                <StyledCard count={sections[2].sectionItems.length} key={idx}>
+                  <StyledCardImageWrapper>
+                    <StyledCardImage src={card.src} />
+                  </StyledCardImageWrapper>
+                  <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
+                  <Styled.Paragraph style={{ textAlign: 'center' }}>
+                    {card.years} years of professional experience
+                  </Styled.Paragraph>
+                </StyledCard>
+              );
+            })}
+          </StyledCardsWrapper>
+        </Styled.Body>
+      </Styled.Wrapper>
     </PageWrapper>
   );
 };

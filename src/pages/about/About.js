@@ -58,28 +58,25 @@ const About = () => {
     },
   });
 
+  if (loading) return <PageWrapper />;
   if (error) return <p>Error :(</p>;
 
   return (
     <PageWrapper heading={data?.page.name} emoji='☠️'>
-      {loading ? (
-        <Loader />
-      ) : (
-        <Styled.Wrapper>
-          <Styled.Body>
-            <Styled.H1>
-              Nolan Thompson
-              <small>Frontend developer & ex. graphic designer</small>
-            </Styled.H1>
+      <Styled.Wrapper>
+        <Styled.Body>
+          <Styled.H1>
+            Nolan Thompson
+            <small>Frontend developer & ex. graphic designer</small>
+          </Styled.H1>
 
-            <CodeWrapper>
-              {splitLineBreaks(data.page.sections[0].sectionItems[0].description).map((line, idx) => {
-                return <span key={idx}>{line}</span>;
-              })}
-            </CodeWrapper>
-          </Styled.Body>
-        </Styled.Wrapper>
-      )}
+          <CodeWrapper>
+            {splitLineBreaks(data.page.sections[0].sectionItems[0].description).map((line, idx) => {
+              return <span key={idx}>{line}</span>;
+            })}
+          </CodeWrapper>
+        </Styled.Body>
+      </Styled.Wrapper>
     </PageWrapper>
   );
 };
