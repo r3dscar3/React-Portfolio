@@ -39,7 +39,7 @@ export const H3 = styled.h3`
 `;
 
 export const Body = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 `;
 
 export const Paragraph = styled.div`

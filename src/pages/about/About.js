@@ -40,6 +40,7 @@ const StyledCard = styled.div`
 
   ${mediaQueries.tablet`
       flex: 0 0 calc(${(props) => (props.count <= 4 ? 100 / props.count : 50)}% - 20px);
+			max-width: calc(${(props) => (props.count <= 4 ? 100 / props.count : 50)}% - 20px); 
   `}
 `;
 

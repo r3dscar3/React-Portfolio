@@ -38,7 +38,7 @@ const Home = () => {
 
   const sortedSections = sortAsc(sections);
 
-  const [section1] = sortedSections || [];
+  const [section1, section2] = sortedSections || [];
 
   return (
     <PageWrapper heading={name || ''} emoji='👋' fullWidth>
@@ -50,6 +50,8 @@ const Home = () => {
             {splitLineBreaks(section1.description).map((line, idx) => (
               <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>
             ))}
+
+            <Styled.H2>{section2.title}</Styled.H2>
           </StyledBrowser>
         </Styled.Body>
       </Styled.Wrapper>
