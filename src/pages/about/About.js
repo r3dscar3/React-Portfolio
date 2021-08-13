@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import GET_ABOUT_CONTENT from 'queries/about';
 
-import { splitLineBreaks } from 'utils';
+import { splitLineBreaks, sortAsc } from 'utils';
 import theme from 'utils/theme';
 import mediaQueries from 'utils/mediaQueries';
 
@@ -16,7 +16,6 @@ import Bass from 'icons/Bass';
 import Glasses from 'icons/Glasses';
 import Golf from 'icons/Golf';
 import Hockey from 'icons/Hockey';
-import { sortAsc } from 'src/utils';
 
 const StyledCardsWrapper = styled.div`
   display: flex;
