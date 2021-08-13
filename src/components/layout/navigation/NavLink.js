@@ -51,7 +51,7 @@ const NavLink = (props) => {
 
   return (
     <Container>
-      <Link href={pathname}>
+      <Link href={pathname} passHref>
         <Wrapper active={active}>
           <Emoji>{emoji}</Emoji>
           <Text active={active}>{label}</Text>

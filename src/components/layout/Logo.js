@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const Logo = () => {
   return (
-    <Link href='/'>
+    <Link href='/' passHref>
       <Container>
         <Glasses />
       </Container>

@@ -94,13 +94,13 @@ const Navigation = (props) => {
         ))}
       </NavWrapper>
       <Footer>
-        <a target='_blank' rel='noopener noreferer nofollow' href='https://github.com/r3dscar3'>
+        <a target='_blank' rel='noopener noreferrer nofollow' href='https://github.com/r3dscar3'>
           <GitHub />
         </a>
-        <a target='_blank' rel='noopener noreferer nofollow' href='https://codepen.io/r3dscar3'>
+        <a target='_blank' rel='noopener noreferrer nofollow' href='https://codepen.io/r3dscar3'>
           <CodePen />
         </a>
-        <a target='_blank' rel='noopener noreferer nofollow' href='https://linkedin.com/r3dscar3'>
+        <a target='_blank' rel='noopener noreferrer nofollow' href='https://linkedin.com/r3dscar3'>
           <LinkedIn />
         </a>
       </Footer>

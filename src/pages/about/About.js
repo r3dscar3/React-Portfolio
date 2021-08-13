@@ -113,7 +113,7 @@ const CodeWrapper = styled.pre`
   }
 `;
 
-const Hobbies = [<Bass />, <Golf />, <Hockey />];
+const Hobbies = [<Bass key={1} />, <Golf key={2} />, <Hockey key={3} />];
 
 const About = () => {
   const { loading, error, data } = useQuery(GET_ABOUT_CONTENT, {
