@@ -37,6 +37,7 @@ const Heading = styled.h1`
 `;
 
 const ContentWrapper = styled.div`
+  position: relative;
   background-color: ${(props) => props.theme.colors.backgroundContent};
   flex: 1 0 0%;
   min-height: 0;
@@ -49,22 +50,19 @@ const ContentWrapper = styled.div`
 `;
 
 const Content = styled.div`
-  position: relative;
   width: 100%;
   max-width: 1200px;
 `;
 
 const PageWrapper = (props) => {
-  const { children, heading, emoji, fullWidth } = props;
+  const { children, heading, emoji } = props;
 
   return (
     <Container>
-      {heading && (
-        <Header>
-          <Emoji>{emoji}</Emoji>
-          <Heading>{heading}</Heading>
-        </Header>
-      )}
+      <Header>
+        <Emoji>{emoji}</Emoji>
+        <Heading>{heading}</Heading>
+      </Header>
 
       <ContentWrapper>
         {!children && <Loader />}
