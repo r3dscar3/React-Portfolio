@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import GET_HOME_CONTENT from 'queries/home';
 
-import { splitLineBreaks } from 'utils';
+import { splitLineBreaks, sortAsc } from 'utils';
 
 import * as Styled from 'components/layout/StyledComponents';
 import PageWrapper from 'components/layout/PageWrapper';
