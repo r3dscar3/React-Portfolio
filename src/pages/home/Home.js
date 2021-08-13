@@ -33,16 +33,21 @@ const Home = () => {
   if (loading) return <PageWrapper />;
   if (error) return <p>Error :(</p>;
 
-  const { name, sections } = data?.page || {};
+  const { page, sections } = data || {};
+  const { name } = page || {};
+
+  const sortedSections = sortAsc(sections);
+
+  const [section1] = sortedSections || [];
 
   return (
     <PageWrapper heading={name || ''} emoji='👋' fullWidth>
       <Styled.Wrapper fullWidth>
         <Styled.Body>
           <StyledBrowser>
-            <Styled.H1>{sections[0].title}</Styled.H1>
+            <Styled.H1>{section1.title}</Styled.H1>
 
-            {sections[0].sectionItems.map((item, idx) => (
+            {section1.sectionItems.map((item, idx) => (
               <div key={idx}>
                 {splitLineBreaks(item.description).map((line, idx) => (
                   <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>

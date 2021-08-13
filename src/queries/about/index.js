@@ -6,18 +6,20 @@ const GET_ABOUT_CONTENT = gql`
       id
       name
       description
-      sections {
-        id
-        title
-				description
-        sectionItems {
-          id
-          title
-          description
-					years
-					src
-        }
-      }
+    }
+
+    sections(id: $id) {
+      id
+      title
+      description
+    }
+
+    sectionItems(id: $id) {
+      id
+      title
+      description
+      years
+      src
     }
   }
 `;

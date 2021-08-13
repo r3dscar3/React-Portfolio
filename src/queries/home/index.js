@@ -6,18 +6,11 @@ const GET_HOME_CONTENT = gql`
       id
       name
       description
-      sections {
-        id
-        title
-        description
-        sectionItems {
-          id
-          title
-          description
-          years
-          src
-        }
-      }
+    }
+    sections(id: $id) {
+      id
+      title
+      description
     }
   }
 `;

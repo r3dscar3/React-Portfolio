@@ -16,6 +16,7 @@ import Bass from 'icons/Bass';
 import Glasses from 'icons/Glasses';
 import Golf from 'icons/Golf';
 import Hockey from 'icons/Hockey';
+import { sortAsc } from 'src/utils';
 
 const StyledCardsWrapper = styled.div`
   display: flex;
@@ -125,29 +126,34 @@ const About = () => {
   if (loading) return <PageWrapper />;
   if (error) return <p>Error :(</p>;
 
-  const { name, sections } = data?.page || {};
+  const { page, sections, sectionItems } = data || {};
+  const { name } = page || {};
+
+  const sortedSections = sortAsc(sections);
+
+  const [section1, section2, section3, section4] = sortedSections || [];
 
   return (
     <PageWrapper heading={name} emoji='☠️'>
       <Styled.Wrapper>
         <Styled.Body>
           <Styled.H1>
-            {sections[0].title}
-            <small>{sections[0].description}</small>
+            {section1.title}
+            <small>{section1.description}</small>
           </Styled.H1>
 
           <CodeWrapper>
-            {splitLineBreaks(sections[1].sectionItems[0].description).map((line, idx) => {
+            {splitLineBreaks(section2.description).map((line, idx) => {
               return <span key={idx}>{line}</span>;
             })}
           </CodeWrapper>
         </Styled.Body>
         <Styled.Body>
-          <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
+          <Styled.H2 style={{ paddingBottom: 12 }}>{section3.title}</Styled.H2>
           <StyledCardsWrapper>
-            {sections[2].sectionItems.map((card, idx) => {
+            {sortAsc(section3.sectionItems).map((card, idx) => {
               return (
-                <StyledCard count={sections[2].sectionItems.length} key={idx}>
+                <StyledCard count={section3.sectionItems.length} key={idx}>
                   <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
                   <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
                   <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
@@ -159,9 +165,9 @@ const About = () => {
         <Styled.Body>
           <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
           <StyledCardsWrapper>
-            {sections[3].sectionItems.map((card, idx) => {
+            {sortAsc(section4.sectionItems).map((card, idx) => {
               return (
-                <StyledCard count={sections[3].sectionItems.length} key={idx}>
+                <StyledCard count={section4.sectionItems.length} key={idx}>
                   <StyledCardImageWrapper>
                     <StyledCardImage src={card.src} />
                   </StyledCardImageWrapper>
