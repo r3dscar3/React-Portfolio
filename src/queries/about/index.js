@@ -12,14 +12,15 @@ const GET_ABOUT_CONTENT = gql`
       id
       title
       description
-    }
-
-    sectionItems(id: $id) {
-      id
-      title
-      description
-      years
-      src
+      sortOrder
+      sectionItems {
+        id
+        title
+        description
+        years
+        src
+        sortOrder
+      }
     }
   }
 `;
