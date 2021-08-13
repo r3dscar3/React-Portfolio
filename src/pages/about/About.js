@@ -162,7 +162,7 @@ const About = () => {
           </StyledCardsWrapper>
         </Styled.Body>
         <Styled.Body>
-          <Styled.H2 style={{ paddingBottom: 12 }}>{sections[2].title}</Styled.H2>
+          <Styled.H2 style={{ paddingBottom: 12 }}>{section4.title}</Styled.H2>
           <StyledCardsWrapper>
             {sortAsc(section4.sectionItems).map((card, idx) => {
               return (

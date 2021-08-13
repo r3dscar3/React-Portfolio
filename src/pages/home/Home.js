@@ -47,12 +47,8 @@ const Home = () => {
           <StyledBrowser>
             <Styled.H1>{section1.title}</Styled.H1>
 
-            {section1.sectionItems.map((item, idx) => (
-              <div key={idx}>
-                {splitLineBreaks(item.description).map((line, idx) => (
-                  <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>
-                ))}
-              </div>
+            {splitLineBreaks(section1.description).map((line, idx) => (
+              <Styled.Paragraph key={idx}>{line}</Styled.Paragraph>
             ))}
           </StyledBrowser>
         </Styled.Body>
