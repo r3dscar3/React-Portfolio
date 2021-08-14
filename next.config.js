@@ -12,7 +12,6 @@ const nextConfig = {
     config.resolve.modules = [
       'node_modules',
       path.join(__dirname, 'src'),
-      path.join(__dirname, 'src/static'),
       'components',
       'icons',
       'utils',
