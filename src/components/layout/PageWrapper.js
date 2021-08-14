@@ -16,9 +16,9 @@ const Container = styled.div`
 
 const Header = styled.div`
   align-items: center;
+  background-color: #fff;
   border-bottom: 1px solid ${theme.colors.border};
   display: flex;
-  flex: 0 0 auto;
   height: 72px;
   padding-left: 34px;
 `;
@@ -50,7 +50,8 @@ const ContentWrapper = styled.div`
 `;
 
 const Content = styled.div`
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   max-width: 1200px;
 `;
 
@@ -66,7 +67,7 @@ const PageWrapper = (props) => {
 
       <ContentWrapper>
         {!children && <Loader />}
-        <Content>{children}</Content>
+        <Content className='content-transition'>{children}</Content>
       </ContentWrapper>
     </Container>
   );

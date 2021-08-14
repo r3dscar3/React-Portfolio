@@ -67,6 +67,7 @@ export default createGlobalStyle`
   body {
     color: #4a4a4a;
     font-family: ${theme.fontStack};
+		background-color: ${theme.colors.backgroundContent};
   }
 
   * {
@@ -80,4 +81,49 @@ export default createGlobalStyle`
   em, i {
     font-style: italic;
   }
+
+	a {
+		color: ${theme.colors.darkGrey};
+		font-weight: 700;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	[class^="page-transition-"] {
+		flex: 1;
+	}
+
+	.page-transition-enter {
+		opacity: 0;
+
+		.content-transition {
+			transform: translate(-100%, 0);
+		}
+	}
+
+	.page-transition-enter-active {
+		opacity: 1;
+		transition: opacity 300ms ease-in;
+
+		.content-transition {
+			transform: translate(0, 0);
+			transition: transform 200ms ease-out;
+		}
+	}
+
+	.page-transition-exit {
+		opacity: 1;
+
+		.content-transition {
+			transform: translate(0, 0);
+		}
+	}
+
+	.page-transition-exit-active {
+		opacity: 0;
+		transition: opacity 300ms ease-in;
+	}
 `;

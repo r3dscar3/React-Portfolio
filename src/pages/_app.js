@@ -4,16 +4,32 @@ import 'cross-fetch/polyfill';
 import styled, { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import { PageTransition } from 'next-page-transitions';
+
+import mediaQueries from 'utils/mediaQueries';
+import theme from 'utils/theme';
 
 import GlobalStyle from 'components/layout/GlobalStyle';
 import Navigation from 'components/layout/navigation';
 
-import theme from 'utils/theme';
-
 const Wrapper = styled.div`
-  display: flex;
-  height: 100%;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'nav main';
+
+  ${mediaQueries.tablet`
+		grid-template-columns: 108px 1fr;
+	`}
+  ${mediaQueries.desktop`
+		grid-template-columns: 200px 1fr;
+	`};
+`;
+
+const MainContent = styled.div`
+  grid-area: main;
+	overflow-x: auto;
+	height: 100vh;
 `;
 
 const client = new ApolloClient({
@@ -39,7 +55,11 @@ export default class MyApp extends App {
           <GlobalStyle />
           <Wrapper>
             <Navigation />
-            <Component {...pageProps} />
+            <MainContent>
+              <PageTransition classNames='page-transition' timeout={300}>
+                <Component {...pageProps} />
+              </PageTransition>
+            </MainContent>
           </Wrapper>
         </ThemeProvider>
       </ApolloProvider>

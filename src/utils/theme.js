@@ -1,4 +1,4 @@
-export default {
+const theme = {
   colors: {
     grey: {
       100: 'hsl(219, 18%, 25%)',
@@ -23,3 +23,5 @@ export default {
   },
   fontStack: 'Noto Sans JP, Helvetica Neue, sans-serif',
 };
+
+export default theme;

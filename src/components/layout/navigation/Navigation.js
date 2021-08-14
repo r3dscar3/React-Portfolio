@@ -1,11 +1,18 @@
 import { withRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
+import { useQuery } from '@apollo/react-hooks';
 
+import GET_PAGES from 'queries/navigation';
+
+import { sortAsc } from 'utils';
 import theme from 'utils/theme';
 
 import Logo from 'components/layout/Logo';
+
 import NavLink from './NavLink';
+
+import Loader from 'components/Loader';
 
 import mediaQueries from 'utils/mediaQueries';
 
@@ -14,20 +21,20 @@ import CodePen from 'icons/CodePen';
 import LinkedIn from 'icons/LinkedIn';
 
 const Container = styled.div`
+  position: relative;
+  grid-area: nav;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.backgroundMenu};
-  flex: 0 0 auto;
   padding-top: 28px;
-  width: 50px;
+  z-index: 666;
 
   ${mediaQueries.tablet`
-    width: 108px;
     padding-top: 20px;
   `}
 
   ${mediaQueries.desktop`
-    width: 200px;
     padding-top: 15px;
   `}
 `;
@@ -78,20 +85,31 @@ const routes = [
 const Navigation = (props) => {
   const { router } = props;
 
+  const { loading, error, data } = useQuery(GET_PAGES);
+
+  if (loading) return <Loader />;
+  if (error) return <p>Error :(</p>;
+
+  const routes = sortAsc(data.pages) || [];
+
   return (
     <Container>
       <Logo />
 
       <NavWrapper>
-        {routes.map((route) => (
-          <NavLink
-            active={router.pathname === route.pathname}
-            emoji={route.emoji}
-            key={route.key}
-            label={route.label}
-            pathname={route.pathname}
-          />
-        ))}
+        {routes.map((route, idx) => {
+          if (idx !== 0) {
+            return (
+              <NavLink
+                active={router.pathname === route.slug}
+                emoji={route.emoji}
+                key={idx}
+                label={route.name}
+                pathname={`/${route.slug}`}
+              />
+            );
+          }
+        })}
       </NavWrapper>
       <Footer>
         <a target='_blank' rel='noopener noreferrer nofollow' href='https://github.com/r3dscar3'>

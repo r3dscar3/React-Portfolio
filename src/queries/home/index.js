@@ -11,6 +11,15 @@ const GET_HOME_CONTENT = gql`
       id
       title
       description
+      sortOrder
+      sectionItems {
+        id
+        title
+        description
+        years
+        src
+        sortOrder
+      }
     }
   }
 `;

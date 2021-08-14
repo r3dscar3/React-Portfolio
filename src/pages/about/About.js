@@ -17,14 +17,30 @@ import Glasses from 'icons/Glasses';
 import Golf from 'icons/Golf';
 import Hockey from 'icons/Hockey';
 
+const StyledWrapMaster = styled.div`
+  margin: 0 -15px;
+`;
+
 const StyledCardsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
 
   ${mediaQueries.tablet`
     flex-direction: row;
-    justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: center;
+  `}
+`;
+
+const StyledCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 15px;
+
+  ${mediaQueries.tablet`
+      flex: 0 0 ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
+			max-width: ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%; 
   `}
 `;
 
@@ -32,16 +48,12 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
   padding: 15px;
   border: 1px solid ${theme.colors.border};
   border-radius: 8px;
   background: #fff;
-  margin: 35px 0;
-
-  ${mediaQueries.tablet`
-      flex: 0 0 calc(${(props) => (props.count <= 4 ? 100 / props.count : 50)}% - 20px);
-			max-width: calc(${(props) => (props.count <= 4 ? 100 / props.count : 50)}% - 20px); 
-  `}
 `;
 
 const StyledCardIcon = styled.div`
@@ -150,35 +162,43 @@ const About = () => {
         </Styled.Body>
         <Styled.Body>
           <Styled.H2 style={{ paddingBottom: 12 }}>{section3.title}</Styled.H2>
-          <StyledCardsWrapper>
-            {sortAsc(section3.sectionItems).map((card, idx) => {
-              return (
-                <StyledCard count={section3.sectionItems.length} key={idx}>
-                  <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
-                  <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
-                  <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
-                </StyledCard>
-              );
-            })}
-          </StyledCardsWrapper>
+          <StyledWrapMaster>
+            <StyledCardsWrapper>
+              {sortAsc(section3.sectionItems).map((card, idx) => {
+                return (
+                  <StyledCardWrapper key={idx} count={section3.sectionItems.length}>
+                    <StyledCard>
+                      <StyledCardIcon>{Hobbies[idx] || <Glasses />}</StyledCardIcon>
+                      <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
+                      <Styled.Paragraph style={{ textAlign: 'center' }}>{card.description}</Styled.Paragraph>
+                    </StyledCard>
+                  </StyledCardWrapper>
+                );
+              })}
+            </StyledCardsWrapper>
+          </StyledWrapMaster>
         </Styled.Body>
         <Styled.Body>
           <Styled.H2 style={{ paddingBottom: 12 }}>{section4.title}</Styled.H2>
-          <StyledCardsWrapper>
-            {sortAsc(section4.sectionItems).map((card, idx) => {
-              return (
-                <StyledCard count={section4.sectionItems.length} key={idx}>
-                  <StyledCardImageWrapper>
-                    <StyledCardImage src={card.src} />
-                  </StyledCardImageWrapper>
-                  <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
-                  <Styled.Paragraph style={{ textAlign: 'center' }}>
-                    {card.years} years of professional experience
-                  </Styled.Paragraph>
-                </StyledCard>
-              );
-            })}
-          </StyledCardsWrapper>
+          <StyledWrapMaster>
+            <StyledCardsWrapper>
+              {sortAsc(section4.sectionItems).map((card, idx) => {
+                return (
+                  <StyledCardWrapper key={idx} count={section3.sectionItems.length}>
+                    <StyledCard count={section4.sectionItems.length}>
+                      <StyledCardImageWrapper>
+                        <StyledCardImage src={card.src} />
+                      </StyledCardImageWrapper>
+                      <Styled.H3 style={{ paddingTop: 15 }}>{card.title}</Styled.H3>
+                      <Styled.Paragraph style={{ textAlign: 'center' }}>
+                        {card.years} years of professional experience
+                      </Styled.Paragraph>
+                    </StyledCard>
+                  </StyledCardWrapper>
+                );
+              })}
+            </StyledCardsWrapper>
+          </StyledWrapMaster>
         </Styled.Body>
       </Styled.Wrapper>
     </PageWrapper>

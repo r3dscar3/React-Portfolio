@@ -29,12 +29,17 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
 `;
 
 export const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
+`;
+
+export const H4 = styled.h4`
+  font-size: 18px;
   font-weight: 700;
 `;
 
