@@ -15,14 +15,41 @@ import PageWrapper from 'components/layout/PageWrapper';
 import theme from 'utils/theme';
 
 const StyledBrowser = styled.div`
+  position: relative;
   width: 100%;
   border-radius: 0.25em;
   padding: 3em 30px 20px;
   border: 1px solid ${theme.colors.border};
-  background: radial-gradient(circle closest-side at 0.7em 0.7em, #ea5a5a, #ea5a5a 3px, #6c6c6c 4px, transparent 4px),
-    radial-gradient(circle closest-side at 1.4em 0.7em, #d5c035, #d5c035 3px, #6c6c6c 4px, transparent 4px),
-    radial-gradient(circle closest-side at 2.1em 0.7em, #32b42c, #32b42c 3px, #6c6c6c 4px, transparent 4px),
-    linear-gradient(to bottom, ${theme.colors.activeLink} 1.5em, white 1.5em);
+  background: linear-gradient(to bottom, ${theme.colors.activeLink} 1.5em, white 1.5em);
+`;
+
+const StyledBrowserButtons = styled.div`
+  position: absolute;
+  display: flex;
+  top: 7px;
+  left: 10px;
+`;
+
+const Circle = styled.div`
+  width: ${(props) => props.width || 10}px;
+  height: ${(props) => props.width || 10}px;
+  border-radius: ${(props) => props.width / 2 || 5}px;
+
+  & {
+    margin-left: 6px;
+  }
+`;
+
+const Red = styled(Circle)`
+  background-color: #ea5a5a;
+`;
+
+const Yellow = styled(Circle)`
+  background-color: #d5c035;
+`;
+
+const Green = styled(Circle)`
+  background-color: #32b42c;
 `;
 
 const StyledProjectsWrapper = styled.div`
@@ -57,17 +84,22 @@ const Home = () => {
   if (error) return <p>Error :(</p>;
 
   const { page, sections } = data || {};
-  const { name } = page || {};
+  const { name, emoji } = page || {};
 
   const sortedSections = sortAsc(sections);
 
   const [section1, section2, section3] = sortedSections || [];
 
   return (
-    <PageWrapper heading={name || ''} emoji='👋' fullWidth>
+    <PageWrapper heading={name || ''} emoji={emoji} fullWidth>
       <Styled.Wrapper fullWidth>
         <Styled.Body>
           <StyledBrowser>
+            <StyledBrowserButtons>
+              <Red />
+              <Yellow />
+              <Green />
+            </StyledBrowserButtons>
             <Styled.H1>{section1.title}</Styled.H1>
 
             {splitLineBreaks(section1.description).map((line, idx) => (

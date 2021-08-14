@@ -61,27 +61,6 @@ const Footer = styled.div`
   }
 `;
 
-const routes = [
-  {
-    emoji: '👋',
-    key: 'index',
-    label: 'Welcome',
-    pathname: '/',
-  },
-  {
-    emoji: '☠️',
-    key: 'about',
-    label: 'About',
-    pathname: '/about',
-  },
-  {
-    emoji: '✉️',
-    key: 'contact',
-    label: 'Contact',
-    pathname: '/contact',
-  },
-];
-
 const Navigation = (props) => {
   const { router } = props;
 
@@ -101,7 +80,7 @@ const Navigation = (props) => {
           if (idx !== 0) {
             return (
               <NavLink
-                active={router.pathname === route.slug}
+                active={router.pathname === `/${route.slug}`}
                 emoji={route.emoji}
                 key={idx}
                 label={route.name}

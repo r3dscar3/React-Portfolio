@@ -24,14 +24,14 @@ const Header = styled.div`
 `;
 
 const Emoji = styled.div`
-  width: 16px;
-  opacity: 0.7;
+  width: 24px;
+  font-size: 24px;
 `;
 
 const Heading = styled.h1`
   color: ${theme.colors.textGrey};
   font-family: ${(props) => props.theme.fontStack};
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   margin-left: 13px;
 `;

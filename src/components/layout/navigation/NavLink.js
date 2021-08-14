@@ -27,10 +27,12 @@ const Wrapper = styled.div`
 
 const Emoji = styled.div`
   display: inline-block;
-  width: 22px;
+  width: 24px;
+  font-size: 24px;
 
   ${mediaQueries.desktop`
-    width: 14px;
+    width: 20px;
+		font-size: 20px;
   `}
 `;
 
@@ -38,7 +40,8 @@ const Text = styled.a`
   color: ${(props) => (props.active ? '#fff' : '#cacaca')};
   display: none;
   font-family: ${(props) => props.theme.fontStack};
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 400;
   margin-left: 18px;
 
   ${mediaQueries.desktop`

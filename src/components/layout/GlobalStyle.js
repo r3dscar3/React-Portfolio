@@ -86,10 +86,6 @@ export default createGlobalStyle`
 		color: ${theme.colors.darkGrey};
 		font-weight: 700;
 		text-decoration: none;
-
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 
 	[class^="page-transition-"] {
