@@ -139,14 +139,14 @@ const About = () => {
   if (error) return <p>Error :(</p>;
 
   const { page, sections, sectionItems } = data || {};
-  const { name, icon } = page || {};
+  const { name, emoji } = page || {};
 
   const sortedSections = sortAsc(sections);
 
   const [section1, section2, section3, section4] = sortedSections || [];
 
   return (
-    <PageWrapper heading={name} emoji={icon}>
+    <PageWrapper heading={name} emoji={emoji}>
       <Styled.Wrapper>
         <Styled.Body>
           <Styled.H1>

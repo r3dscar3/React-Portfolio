@@ -81,7 +81,7 @@ const Navigation = (props) => {
             return (
               <NavLink
                 active={router.pathname === `/${route.slug}`}
-                emoji={route.icon}
+                emoji={route.emoji}
                 key={idx}
                 label={route.name}
                 pathname={`/${route.slug}`}

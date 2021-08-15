@@ -6,7 +6,7 @@ const GET_ABOUT_CONTENT = gql`
       id
       name
       description
-      icon
+      emoji
     }
 
     sections(id: $id) {
@@ -16,6 +16,7 @@ const GET_ABOUT_CONTENT = gql`
         title
         description
         sortOrder
+        emoji
       }
     }
   }

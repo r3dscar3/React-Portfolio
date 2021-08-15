@@ -25,12 +25,12 @@ const Contact = () => {
   if (error) return <p>Error :(</p>;
 
   const { page, sections } = data || {};
-  const { name, icon } = page || {};
+  const { name, emoji } = page || {};
 
   const [section1] = sections || [];
 
   return (
-    <PageWrapper heading={name} emoji={icon}>
+    <PageWrapper heading={name} emoji={emoji}>
       <Styled.Wrapper>
         <Styled.Body>
           <Styled.H1>{section1.title}</Styled.H1>
