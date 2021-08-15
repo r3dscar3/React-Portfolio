@@ -6,7 +6,7 @@ const GET_HOME_CONTENT = gql`
       id
       name
       description
-      emoji
+      icon
     }
     sections(id: $id) {
       id

@@ -84,14 +84,14 @@ const Home = () => {
   if (error) return <p>Error :(</p>;
 
   const { page, sections } = data || {};
-  const { name, emoji } = page || {};
+  const { name, icon } = page || {};
 
   const sortedSections = sortAsc(sections);
 
   const [section1, section2, section3] = sortedSections || [];
 
   return (
-    <PageWrapper heading={name || ''} emoji={emoji} fullWidth>
+    <PageWrapper heading={name || ''} emoji={icon} fullWidth>
       <Styled.Wrapper fullWidth>
         <Styled.Body>
           <StyledBrowser>

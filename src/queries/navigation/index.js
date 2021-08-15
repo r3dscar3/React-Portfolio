@@ -7,7 +7,7 @@ const GET_PAGES = gql`
       name
       description
       slug
-      emoji
+      icon
     }
   }
 `;
