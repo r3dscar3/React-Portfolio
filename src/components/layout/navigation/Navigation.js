@@ -23,7 +23,7 @@ import LinkedIn from 'icons/LinkedIn';
 const Container = styled.div`
   position: relative;
   grid-area: nav;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.backgroundMenu};
