@@ -37,7 +37,7 @@ const Contact = () => {
           {sortAsc(section1.sectionItems).map((item, idx) => {
             return (
               <StyledContactItem key={idx}>
-                <Styled.Paragraph>{item.title}</Styled.Paragraph>
+                <Styled.Paragraph>{item.emoji}</Styled.Paragraph>
                 <Styled.Paragraph>
                   <Link href={`${idx === 0 ? 'tel:' : 'mailto:'}${item.description}`} passHref>
                     {item.description}
