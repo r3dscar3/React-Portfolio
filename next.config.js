@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   distDir: './dist',
   env: {
-    API_URL: isProd ? 'https://api.pgdbend.com' : 'http://localhost:4000',
+    API_URL: isProd ? 'https://api.pgdbend.com' : 'http://localhost:5000',
   },
   webpack: (config) => {
     config.resolve.modules = [

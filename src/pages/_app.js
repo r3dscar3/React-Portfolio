@@ -28,8 +28,8 @@ const Wrapper = styled.div`
 
 const MainContent = styled.div`
   grid-area: main;
-	overflow-x: auto;
-	height: 100vh;
+  overflow-x: auto;
+  height: 100vh;
 `;
 
 const client = new ApolloClient({

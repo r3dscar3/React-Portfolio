@@ -61,7 +61,7 @@ const PageWrapper = (props) => {
   return (
     <Container>
       <Header>
-        <Emoji dangerouslySetInnerHTML={{ __html: `&#x${emoji};` }} />
+        <Emoji>{emoji}</Emoji>
         <Heading>{heading}</Heading>
       </Header>
 
