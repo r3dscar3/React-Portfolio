@@ -56,7 +56,7 @@ const NavLink = (props) => {
     <Container>
       <Link href={pathname} passHref>
         <Wrapper active={active}>
-          <Emoji>{emoji}</Emoji>
+          <Emoji dangerouslySetInnerHTML={{ __html: emoji }} />
           <Text active={active}>{label}</Text>
         </Wrapper>
       </Link>
