@@ -52,7 +52,11 @@ const Footer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
+
+  ${mediaQueries.tablet} {
+    padding-bottom: 30px;
+  }
 
   svg {
     width: 26px;
