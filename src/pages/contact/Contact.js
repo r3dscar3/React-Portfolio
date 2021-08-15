@@ -30,14 +30,14 @@ const Contact = () => {
   const [section1] = sections || [];
 
   return (
-    <PageWrapper heading={name} emoji={emoji}>
+    <PageWrapper heading={name} emoji={emoji || '📱'}>
       <Styled.Wrapper>
         <Styled.Body>
           <Styled.H1>{section1.title}</Styled.H1>
           {sortAsc(section1.sectionItems).map((item, idx) => {
             return (
               <StyledContactItem key={idx}>
-                <Styled.Paragraph>{item.emoji}</Styled.Paragraph>
+                <Styled.Paragraph>{item.emoji || (idx === 0 ? '📱' : '📧')}</Styled.Paragraph>
                 <Styled.Paragraph>
                   <Link href={`${idx === 0 ? 'tel:' : 'mailto:'}${item.description}`} passHref>
                     {item.description}

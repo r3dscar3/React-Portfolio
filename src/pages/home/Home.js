@@ -91,7 +91,7 @@ const Home = () => {
   const [section1, section2, section3] = sortedSections || [];
 
   return (
-    <PageWrapper heading={name || ''} emoji={emoji} fullWidth>
+    <PageWrapper heading={name || ''} emoji={emoji || '👓'} fullWidth>
       <Styled.Wrapper fullWidth>
         <Styled.Body>
           <StyledBrowser>

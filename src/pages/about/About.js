@@ -146,7 +146,7 @@ const About = () => {
   const [section1, section2, section3, section4] = sortedSections || [];
 
   return (
-    <PageWrapper heading={name} emoji={emoji}>
+    <PageWrapper heading={name} emoji={emoji || '💀'}>
       <Styled.Wrapper>
         <Styled.Body>
           <Styled.H1>
