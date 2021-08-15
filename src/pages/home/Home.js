@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { useQuery } from '@apollo/react-hooks';
 import Image from 'next/image';
 
@@ -62,9 +62,9 @@ const StyledProject = styled.div`
   width: 100%;
   margin: 15px 0;
 
-  ${mediaQueries.tablet`
-		width: 50%;
-	`}
+  ${mediaQueries.tablet} {
+    width: 50%;
+  }
 `;
 
 const StyledImageWrapper = styled.div`

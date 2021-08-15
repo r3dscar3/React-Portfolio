@@ -1,17 +1,37 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { useQuery } from '@apollo/react-hooks';
 import Link from 'next/link';
 
 import GET_CONTACT_CONTENT from 'queries/contact';
 
+import { sortAsc } from 'utils';
+import mediaQueries from 'utils/mediaQueries';
+
 import * as Styled from 'components/layout/StyledComponents';
 import PageWrapper from 'components/layout/PageWrapper';
-import { sortAsc } from 'utils';
 
 const StyledContactItem = styled.div`
   display: flex;
   margin-top: 15px;
+	line-height: 1.2em;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+const Emoji = styled.div`
+  font-size: 20px;
+  min-width: 30px;
+  margin-right: 10px;
+
+  ${mediaQueries.desktop} {
+    width: 18px;
+    font-size: 18px;
+  }
 `;
 
 const Contact = () => {
@@ -37,12 +57,11 @@ const Contact = () => {
           {sortAsc(section1.sectionItems).map((item, idx) => {
             return (
               <StyledContactItem key={idx}>
-                <Styled.Paragraph>{item.emoji || (idx === 0 ? '📱' : '📧')}</Styled.Paragraph>
-                <Styled.Paragraph>
-                  <Link href={`${idx === 0 ? 'tel:' : 'mailto:'}${item.description}`} passHref>
-                    {item.description}
-                  </Link>
-                </Styled.Paragraph>
+                <Emoji>{item.emoji || (idx === 0 ? '📱' : '📧')} :</Emoji>
+
+                <Link href={`${idx === 0 ? 'tel:' : 'mailto:'}${item.description}`} passHref>
+                  {item.description}
+                </Link>
               </StyledContactItem>
             );
           })}

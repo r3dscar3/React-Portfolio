@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import mediaQueries from 'utils/mediaQueries';
 import theme from 'utils/theme';
@@ -44,9 +44,9 @@ const ContentWrapper = styled.div`
   overflow-y: scroll;
   padding: 30px 15px;
 
-  ${mediaQueries.tablet`
+  ${mediaQueries.tablet} {
     padding: 30px;
-  `}
+  }
 `;
 
 const Content = styled.div`

@@ -1,6 +1,6 @@
 import { withRouter } from 'next/router';
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { useQuery } from '@apollo/react-hooks';
 
 import GET_PAGES from 'queries/navigation';
@@ -30,13 +30,13 @@ const Container = styled.div`
   padding-top: 28px;
   z-index: 666;
 
-  ${mediaQueries.tablet`
+  ${mediaQueries.tablet} {
     padding-top: 20px;
-  `}
+  }
 
-  ${mediaQueries.desktop`
+  ${mediaQueries.desktop} {
     padding-top: 15px;
-  `}
+  }
 `;
 
 const NavWrapper = styled.div`

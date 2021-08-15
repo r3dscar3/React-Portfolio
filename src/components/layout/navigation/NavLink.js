@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import mediaQueries from 'utils/mediaQueries';
 import theme from 'utils/theme';
@@ -18,11 +18,11 @@ const Wrapper = styled.div`
   justify-content: center;
   padding: 10px 0;
 
-  ${mediaQueries.desktop`
+  ${mediaQueries.desktop} {
     height: 42px;
     justify-content: flex-start;
     padding: 0 0 0 38px;
-  `}
+  }
 `;
 
 const Emoji = styled.div`
@@ -30,10 +30,10 @@ const Emoji = styled.div`
   width: 24px;
   font-size: 24px;
 
-  ${mediaQueries.desktop`
+  ${mediaQueries.desktop} {
     width: 20px;
-		font-size: 20px;
-  `}
+    font-size: 20px;
+  }
 `;
 
 const Text = styled.a`
@@ -44,9 +44,9 @@ const Text = styled.a`
   font-weight: 400;
   margin-left: 18px;
 
-  ${mediaQueries.desktop`
+  ${mediaQueries.desktop} {
     display: inline;
-  `}
+  }
 `;
 
 const NavLink = (props) => {

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { useQuery } from '@apollo/react-hooks';
 
 import GET_ABOUT_CONTENT from 'queries/about';
@@ -25,11 +25,11 @@ const StyledCardsWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${mediaQueries.tablet`
+  ${mediaQueries.tablet} {
     flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-  `}
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const StyledCardWrapper = styled.div`
@@ -38,10 +38,10 @@ const StyledCardWrapper = styled.div`
   align-items: center;
   padding: 35px 15px;
 
-  ${mediaQueries.tablet`
-      flex: 0 0 ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
-			max-width: ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%; 
-  `}
+  ${mediaQueries.tablet} {
+    flex: 0 0 ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
+    max-width: ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
+  }
 `;
 
 const StyledCard = styled.div`

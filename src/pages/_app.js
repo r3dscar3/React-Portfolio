@@ -1,7 +1,8 @@
 import React from 'react';
 import App from 'next/app';
 import 'cross-fetch/polyfill';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from '@emotion/styled';
+import { ThemeProvider } from '@emotion/react';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { PageTransition } from 'next-page-transitions';
@@ -18,12 +19,13 @@ const Wrapper = styled.div`
   grid-template-rows: 1fr;
   grid-template-areas: 'nav main';
 
-  ${mediaQueries.tablet`
-		grid-template-columns: 108px 1fr;
-	`}
-  ${mediaQueries.desktop`
-		grid-template-columns: 200px 1fr;
-	`};
+  ${mediaQueries.tablet} {
+    grid-template-columns: 108px 1fr;
+  }
+
+  ${mediaQueries.desktop} {
+    grid-template-columns: 200px 1fr;
+  } ;
 `;
 
 const MainContent = styled.div`
