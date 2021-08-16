@@ -17,6 +17,7 @@ const GET_ABOUT_CONTENT = gql`
         description
         sortOrder
         emoji
+        src
       }
     }
   }

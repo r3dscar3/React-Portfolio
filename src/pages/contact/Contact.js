@@ -79,7 +79,7 @@ const StyledCardImageWrapper = styled.div`
   width: 100%;
 
   svg {
-    width: 100%;
+    width: 75px;
     height: auto;
   }
 `;
@@ -117,13 +117,14 @@ const Contact = () => {
           })}
         </Styled.Body>
         <Styled.Body>
+          <Styled.H2>{section2.title}</Styled.H2>
           <StyledCardsWrapper>
             {sortAsc(section2.sectionItems).map((item, idx) => {
               return (
                 <StyledCardWrapper key={idx} count={section2.sectionItems.length}>
                   <StyledCard>
                     <StyledCardImageWrapper>
-                      <Icon icon={item.src} fill={theme.colors.textDefault} />
+                      <Icon name={item.src} fill={theme.colors.textDefault} />
                     </StyledCardImageWrapper>
                     <Styled.H3 style={{ paddingTop: 15 }}>{item.title}</Styled.H3>
                   </StyledCard>
