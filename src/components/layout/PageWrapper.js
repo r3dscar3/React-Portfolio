@@ -39,7 +39,6 @@ const Heading = styled.h1`
 const ContentWrapper = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.colors.backgroundContent};
-  flex: 0 0 100%;
   min-height: 100%;
   overflow-y: scroll;
   padding: 30px 15px;
