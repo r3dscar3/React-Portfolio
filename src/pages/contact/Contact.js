@@ -7,11 +7,11 @@ import GET_CONTACT_CONTENT from 'queries/contact';
 
 import { sortAsc } from 'utils';
 import mediaQueries from 'utils/mediaQueries';
+import theme from 'utils/theme';
 
 import * as Styled from 'components/layout/StyledComponents';
 import PageWrapper from 'components/layout/PageWrapper';
 import Icon from 'components/Icon';
-import theme from 'src/utils/theme';
 
 const StyledContactItem = styled.div`
   display: flex;
