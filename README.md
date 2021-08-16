@@ -1,3 +1,3 @@
-# React Version of Protfolio
+# Portfolio
 
-### Created using only iPad for development.
+### Nolan Thompson
