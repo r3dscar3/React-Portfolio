@@ -57,6 +57,11 @@ const StyledCardWrapper = styled.div`
     flex: 0 0 ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
     max-width: ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
   }
+
+  a {
+    display: block;
+    width: 100%;
+  }
 `;
 
 const StyledCard = styled.div`
@@ -110,7 +115,7 @@ const Contact = () => {
                 <Emoji>{item.emoji || (idx === 0 ? '📱' : '📧')} :</Emoji>
 
                 <Link href={`${idx === 0 ? 'tel:' : 'mailto:'}${item.description}`} passHref>
-                  {item.description}
+                  <a>{item.description}</a>
                 </Link>
               </StyledContactItem>
             );
@@ -121,16 +126,18 @@ const Contact = () => {
           <StyledCardsWrapper>
             {sortAsc(section2.sectionItems).map((item, idx) => {
               return (
-                <Link key={idx} href={item.description} passHref>
-                  <StyledCardWrapper key={idx} count={section2.sectionItems.length}>
-                    <StyledCard>
-                      <StyledCardImageWrapper>
-                        <Icon name={item.src} fill={theme.colors.textDefault} />
-                      </StyledCardImageWrapper>
-                      <Styled.H3 style={{ paddingTop: 15 }}>{item.title}</Styled.H3>
-                    </StyledCard>
-                  </StyledCardWrapper>
-                </Link>
+                <StyledCardWrapper key={idx} count={section2.sectionItems.length}>
+                  <Link key={idx} href={item.description} passHref>
+                    <a target='_blank'>
+                      <StyledCard>
+                        <StyledCardImageWrapper>
+                          <Icon name={item.src} fill={theme.colors.textDefault} />
+                        </StyledCardImageWrapper>
+                        <Styled.H3 style={{ paddingTop: 15 }}>{item.title}</Styled.H3>
+                      </StyledCard>
+                    </a>
+                  </Link>
+                </StyledCardWrapper>
               );
             })}
           </StyledCardsWrapper>
