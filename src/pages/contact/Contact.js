@@ -121,14 +121,16 @@ const Contact = () => {
           <StyledCardsWrapper>
             {sortAsc(section2.sectionItems).map((item, idx) => {
               return (
-                <StyledCardWrapper key={idx} count={section2.sectionItems.length}>
-                  <StyledCard>
-                    <StyledCardImageWrapper>
-                      <Icon name={item.src} fill={theme.colors.textDefault} />
-                    </StyledCardImageWrapper>
-                    <Styled.H3 style={{ paddingTop: 15 }}>{item.title}</Styled.H3>
-                  </StyledCard>
-                </StyledCardWrapper>
+                <Link key={idx} href={item.description} passHref>
+                  <StyledCardWrapper key={idx} count={section2.sectionItems.length}>
+                    <StyledCard>
+                      <StyledCardImageWrapper>
+                        <Icon name={item.src} fill={theme.colors.textDefault} />
+                      </StyledCardImageWrapper>
+                      <Styled.H3 style={{ paddingTop: 15 }}>{item.title}</Styled.H3>
+                    </StyledCard>
+                  </StyledCardWrapper>
+                </Link>
               );
             })}
           </StyledCardsWrapper>

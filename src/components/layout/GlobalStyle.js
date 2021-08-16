@@ -154,11 +154,7 @@ const GlobalStyle = () => {
         body {
           color: #4a4a4a;
           font-family: ${theme.fontStack};
-          background-color: linear-gradient(
-            to right,
-            ${theme.colors.backgroundMenu} 50px,
-            white 50px
-          ); //this is for ios in landscape so menu background matches in the gutter
+          background-color: ${theme.colors.backgroundContent};
         }
 
         * {
