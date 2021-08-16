@@ -10,11 +10,13 @@ import mediaQueries from 'utils/mediaQueries';
 
 import * as Styled from 'components/layout/StyledComponents';
 import PageWrapper from 'components/layout/PageWrapper';
+import Icon from 'components/Icon';
+import theme from 'src/utils/theme';
 
 const StyledContactItem = styled.div`
   display: flex;
   margin-top: 15px;
-	line-height: 1.2em;
+  line-height: 1.2em;
 
   a {
     &:hover {
@@ -34,6 +36,54 @@ const Emoji = styled.div`
   }
 `;
 
+const StyledCardsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${mediaQueries.tablet} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`;
+
+const StyledCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 15px;
+
+  ${mediaQueries.tablet} {
+    flex: 0 0 ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
+    max-width: ${(props) => (props.count >= 3 ? 100 / props.count : 25)}%;
+  }
+`;
+
+const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid ${theme.colors.border};
+  border-radius: 8px;
+  background: #fff;
+`;
+
+const StyledCardImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+`;
+
 const Contact = () => {
   const { loading, error, data } = useQuery(GET_CONTACT_CONTENT, {
     variables: {
@@ -47,7 +97,7 @@ const Contact = () => {
   const { page, sections } = data || {};
   const { name, emoji } = page || {};
 
-  const [section1] = sections || [];
+  const [section1, section2] = sections || [];
 
   return (
     <PageWrapper heading={name} emoji={emoji || '📱'}>
@@ -65,6 +115,22 @@ const Contact = () => {
               </StyledContactItem>
             );
           })}
+        </Styled.Body>
+        <Styled.Body>
+          <StyledCardsWrapper>
+            {sortAsc(section2.sectionItems).map((item, idx) => {
+              return (
+                <StyledCardWrapper key={idx} count={section2.sectionItems.length}>
+                  <StyledCard>
+                    <StyledCardImageWrapper>
+                      <Icon icon={item.src} fill={theme.colors.textDefault} />
+                    </StyledCardImageWrapper>
+                    <Styled.H3 style={{ paddingTop: 15 }}>{item.title}</Styled.H3>
+                  </StyledCard>
+                </StyledCardWrapper>
+              );
+            })}
+          </StyledCardsWrapper>
         </Styled.Body>
       </Styled.Wrapper>
     </PageWrapper>
