@@ -50,7 +50,7 @@ export default class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, router } = this.props;
     return (
       <ApolloProvider client={client}>
         <ThemeProvider theme={theme}>
@@ -59,7 +59,7 @@ export default class MyApp extends App {
             <Navigation />
             <MainContent>
               <PageTransition classNames='page-transition' timeout={300}>
-                <Component {...pageProps} />
+                <Component {...pageProps} key={router.route} />
               </PageTransition>
             </MainContent>
           </Wrapper>
