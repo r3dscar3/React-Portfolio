@@ -154,8 +154,10 @@ const GlobalStyle = () => {
         body {
           color: #4a4a4a;
           font-family: ${theme.fontStack};
-          backfround-color: ${theme.colors.backgroundContent};
-          background-color: linear-gradient(90deg, ${theme.colors.backgroundMenu} 0, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px);
+          background: ${theme.colors.backgroundContent};
+          background: -moz-linear-gradient(left,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
+          background: -webkit-linear-gradient(left,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
+          background: linear-gradient(to right,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
         }
 
         * {
