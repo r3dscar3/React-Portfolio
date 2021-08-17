@@ -149,15 +149,15 @@ const GlobalStyle = () => {
           height: 100vh;
           width: 100vw;
           overflow: hidden;
+          background-color: ${theme.colors.backgroundContent};
+          background: -moz-linear-gradient(left,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
+          background: -webkit-linear-gradient(left,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
+          background: linear-gradient(to right,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
         }
 
         body {
           color: #4a4a4a;
           font-family: ${theme.fontStack};
-          background: ${theme.colors.backgroundContent};
-          background: -moz-linear-gradient(left,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
-          background: -webkit-linear-gradient(left,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
-          background: linear-gradient(to right,  ${theme.colors.backgroundMenu} 0px, ${theme.colors.backgroundMenu} 50px, ${theme.colors.backgroundContent} 50px, ${theme.colors.backgroundContent} 50px);
         }
 
         * {
