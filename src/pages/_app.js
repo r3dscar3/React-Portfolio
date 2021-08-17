@@ -35,7 +35,7 @@ const MainContent = styled.div`
 `;
 
 const client = new ApolloClient({
-  uri: process.env.API_URL,
+  uri: process.env.NEXT_PUBLIC_API_URL,
 });
 
 export default class MyApp extends App {
