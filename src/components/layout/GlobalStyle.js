@@ -153,7 +153,6 @@ const GlobalStyle = () => {
         body {
           color: #4a4a4a;
           font-family: ${theme.fontStack};
-          background-color: ${theme.colors.backgroundContent};
         }
 
         * {

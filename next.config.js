@@ -1,8 +1,13 @@
 const path = require('path');
 const plugins = require('next-compose-plugins');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   distDir: './dist',
+  env: {
+    API_URL: isProd ? 'https://api.pgdbend.com' : 'http://localhost:5000',
+  },
   webpack: (config) => {
     config.resolve.modules = [
       'node_modules',
