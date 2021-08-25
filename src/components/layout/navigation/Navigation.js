@@ -21,9 +21,10 @@ import CodePen from 'icons/CodePen';
 import LinkedIn from 'icons/LinkedIn';
 
 const Container = styled.div`
-  position: relative;
+  position: sticky;
+  top: 0;
   grid-area: nav;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.backgroundMenu};

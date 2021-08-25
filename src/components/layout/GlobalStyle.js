@@ -146,9 +146,8 @@ const GlobalStyle = () => {
         body,
         html,
         #__next {
-          height: 100vh;
-          width: 100vw;
-          overflow: hidden;
+          height: 100%;
+          width: 100%;
         }
 
         body {
